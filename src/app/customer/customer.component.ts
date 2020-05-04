@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import {CustomerService} from '../Services/customer.service';
 
 @Component({
-  selector: 'app-user',
-  templateUrl: './user.component.html',
-  styleUrls: ['./user.component.css'],
+  selector: 'app-customer',
+  templateUrl: './customer.component.html',
+  styleUrls: ['./customer.component.css'],
   providers:[CustomerService]
 })
-export class UserComponent implements OnInit {
+export class CustomerComponent implements OnInit {
 
   constructor(private customerService:CustomerService) 
   { 

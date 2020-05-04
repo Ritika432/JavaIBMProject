@@ -13,11 +13,12 @@ import { AdminComponent } from './admin/admin.component';
 import { CreditCardComponent } from './credit-card/credit-card.component';
 import { BookingComponent } from './booking/booking.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
-import {RouteComponent} from './route/route.component';
-
-
-
-
+import { LoginComponent } from './login/login.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
+import { RouteListComponent } from './route-list/route-list.component';
+import {CustomerComponent} from './customer/customer.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 
 @NgModule({
@@ -26,11 +27,12 @@ import {RouteComponent} from './route/route.component';
     AdminComponent,
     VehicleComponent, CreditCardComponent,
     BookingComponent,
-    RouteComponent,
-  //  LoginComponent,
-   // RegistrationComponent,
-   // VehicleListComponent,
-   // RouteListComponent,
+    VehicleComponent,
+    LoginComponent,
+    RegistrationComponent,
+    VehicleListComponent,
+    RouteListComponent,
+    CustomerComponent
 
   ],
   imports: [
@@ -40,7 +42,8 @@ import {RouteComponent} from './route/route.component';
     AppRoutingModule,
    
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MDBBootstrapModule.forRoot()
 
   ],
   providers: [],
