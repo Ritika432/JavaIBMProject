@@ -21,7 +21,8 @@ import { RouteService } from '../services/route.services';
      {
        this.routeService.getRouteDetails().subscribe((response)=>
        {
-        this.route=response;console.log('Received route details:',response);
+        this.route=response;
+        console.log('Received route details:',response);
          }
        
        );
