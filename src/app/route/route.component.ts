@@ -1,27 +1,15 @@
-import { Injectable} from '@angular/core';
-import {HttpClient,HttpHeaders} from '@angular/common/http';
-import {Observable} from 'rxjs';
+import { Component, OnInit } from '@angular/core';
 
-@Injectable()
-export class RouteService{
+@Component({
+  selector: 'app-route',
+  templateUrl: './route.component.html',
+  styleUrls: ['./route.component.css']
+})
+export class RouteComponent implements OnInit {
 
-  public httpHeaders:HttpHeaders;
+  constructor() { }
 
-  constructor(private _httpClient: HttpClient){
-    this.httpHeaders=new HttpHeaders()
-    .set('allow-origin-access-control','*')
-    .set('Content-type','application/json');
+  ngOnInit(): void {
   }
-  getRouteDetails(): Observable<Object> {
-    return this._httpClient.get('http://localhost:8080/app/route/{routeId}',{headers:this.httpHeaders});
-  }
-  deleteRouteDetails(sessionId): Observable<Object> {
-    return this._httpClient.delete('http://localhost:8080/app/route/{routeId} ',{headers:this.httpHeaders.set('authToken',sessionId)});
-  }
-  addRouteDetails(routeObj,sessionId:string): Observable<Object> {
-    return this._httpClient.post('http://localhost:8080/app/route',JSON.stringify(routeObj),{headers:this.httpHeaders.set('authtoken',sessionId)});
-  }
-  updateRouteDetails(routeObj,sessionId): Observable<Object> {
-    return this._httpClient.put('http://localhost:8080/app/route/{routeId} ',JSON.stringify(routeObj),{headers:this.httpHeaders.set('authtoken',sessionId)});
-  }
+
 }
