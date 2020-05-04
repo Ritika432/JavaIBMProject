@@ -21,6 +21,7 @@ import { RouteListComponent } from './route-list/route-list.component';
 @NgModule({
   declarations: [
     AppComponent,
+    AdminComponent,
     CreditCardComponent,
     BookingComponent,
     VehicleComponent,
