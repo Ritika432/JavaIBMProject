@@ -13,9 +13,9 @@ export class LoginService{
         .set('Content-type','application/json');
       }
 
-      getUser() : Observable<Object> {
+      getUser(user: User) : Observable<Object> {
 
-        return this._httpClient.get( 'http://localhost:8080/app/admin/user/login' , {headers: this.httpHeaders});
+        return this._httpClient.post( 'http://localhost:8080/app/admin/user/login' ,JSON.stringify() , {headers: this.httpHeaders});
         }
 
 
