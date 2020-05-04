@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+/*import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //import { Injectable } from '@angular/core';
 import {FormsModule , ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -25,14 +25,14 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
 import { RouteListComponent } from './route-list/route-list.component';
-
+*/
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdminComponentComponent,
+    /*AdminComponentComponent,
     UserComponentComponent,
     CreditCardComponentComponent,
     LoginComponentComponent,
@@ -49,16 +49,17 @@ import { RouteListComponent } from './route-list/route-list.component';
     RegistrationComponent,
     VehicleListComponent,
     RouteListComponent,
-
+*/
   ],
   imports: [
     BrowserModule,
-    FormsModule,
+    /*FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
     //Injectable,
     HttpClientModule,
     BrowserAnimationsModule
+  */
   ],
   providers: [],
   bootstrap: [AppComponent]
