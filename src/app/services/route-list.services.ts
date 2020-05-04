@@ -3,7 +3,7 @@ import { HttpClientModule,HttpHeaders, HttpClient} from '@angular/common/http';
 import{Observable} from 'rxjs';
 
 @Injectable()
-export class RouteService{
+export class RoutelistService{
 
     public httpHeaders: HttpHeaders;
     public sessionId:   string="";
@@ -16,13 +16,13 @@ constructor(private _httpClient: HttpClient)
 }
 getAllRoutes(){
     
- this.httpHeaders.set('auth-token',this.sessionId);
+ 
 
 return this._httpClient.get('http://localhost:4001/app/route',{headers: this.httpHeaders});
 }
 getRoutes():Observable<Object>{
     
-    this.httpHeaders.set('auth-token',this.sessionId);
+    
     return this._httpClient.get('http://localhost:4001/app/route',{headers: this.httpHeaders});
     }
 updateRoutes(routeId):Observable<Object>{
@@ -35,10 +35,10 @@ updateRoutes(routeId):Observable<Object>{
     
 addRoutes(routeId):Observable<Object>{
 
-
+    this.httpHeaders.set('auth-token',this.sessionId);
 return this._httpClient.post('http://localhost:4001/app/route', JSON.stringify(routeId), {headers: this.httpHeaders});
 }
 deleteRoutes(routeId):Observable<Object>{
-
+    this.httpHeaders.set('auth-token',this.sessionId);
 return this._httpClient.delete(`http://localhost:4001/app/route/${routeId}`, {headers: this.httpHeaders});
 }}
