@@ -7,6 +7,9 @@ import {Observable} from 'rxjs';
 export class AdminService{
 
   public httpHeaders:HttpHeaders;
+  public sessionId:   string="";
+
+  public baseurl = 'http://localhost:8080/app/vehicle';
 
   constructor(private _httpClient: HttpClient){
     this.httpHeaders=new HttpHeaders()
@@ -15,23 +18,23 @@ export class AdminService{
   }
 
 
-getVehicle() : Observable<Object> {
+getVehicle(vehicleid:number) : Observable<Object> {
 
-return this._httpClient.get( 'http://localhost:8080/app/vehicle/{vehicleid}' , {headers: this.httpHeaders});
+return this._httpClient.get( `${this.baseurl}/${vehicleid}` , {headers: this.httpHeaders});
 }
 
 
-addVehicleDetails(vehicleObj,sessionId): Observable<Object> {
-    return this._httpClient.post('http://localhost:8080/app/vehicle',JSON.stringify(vehicleObj),{headers:this.httpHeaders.set('authtoken',sessionId)});
+addVehicleDetails(vehicleObj:Object): Observable<Object> {
+    return this._httpClient.post(`${this.baseurl}`,JSON.stringify(vehicleObj),{headers:this.httpHeaders.set('authtoken',this.sessionId)});
   }
 
-  updateVehicleDetails(vehicleObj,sessionId): Observable<Object> {
-    return this._httpClient.put('http://localhost:8080/app/vehicle/{vehicleid} ',JSON.stringify(vehicleObj),{headers:this.httpHeaders.set('authtoken',sessionId)});
+  updateVehicleDetails(vehicleid:number , vehicleObj:Object): Observable<Object> {
+    return this._httpClient.put(`${this.baseurl}/${vehicleid}`,JSON.stringify(vehicleObj),{headers:this.httpHeaders.set('authtoken',this.sessionId)});
   }
 
 
-deleteVehicleDetails(sessionId): Observable<Object> {
-    return this._httpClient.put('http://localhost:8080/app/vehicle/{vehicleid}' ,{headers:this.httpHeaders.set('authtoken',sessionId)});
+deleteVehicleDetails(vehicleid:number): Observable<Object> {
+    return this._httpClient.put( `${this.baseurl}/${vehicleid}` ,{headers:this.httpHeaders.set('authtoken',this.sessionId)});
   } 
 
 

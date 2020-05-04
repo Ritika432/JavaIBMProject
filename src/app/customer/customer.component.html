@@ -1,1 +1,63 @@
-<p>user works!</p>
+
+<div class ="container">
+    <form>
+    <h1>Register Yourself</h1>
+    <br/>
+        <div class="form-group form">
+             <label for="uname" ><h5>First Name :</h5></label>
+             <input  type="text" class="form-control col-md-4" #firstname placeholder="Enter title " required>
+       </div>
+   
+        <div class="form-group form">
+           <label for="uname" ><h5>Last Name:</h5></label>
+           <input type="text" class="form-control col-md-4" #lastname placeholder="Enter Name" name="lastname" required>
+       </div>
+        <div class="form-group form">
+           <label for="uname" ><h5>Date Of Birth:</h5></label>
+           <input type="date" class="form-control" placeholder="Enter date" #dateOfBirth />
+           
+       </div>
+       <label class="label">Gender</label>
+                                    <div class="p-t-10">
+                                        <label class="radio-container m-r-45">Male
+                                            <input type="radio" checked="checked" name="gender">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container">Female
+                                            <input type="radio" name="gender">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+        <div class="form-group form">
+             <label for="uname" ><h5>Street:</h5></label>
+             <input type="text" class="form-control col-md-4" #street required >
+       </div> 
+       <div class="form-group form">
+           <label for="uname" ><h5>Location:</h5></label>
+           <input type= "text" class="form-control col-md-4" #location placeholder="Enter Location" >
+       </div>
+       <div class="form-group form">
+             <label for="uname" ><h5>City:</h5></label>
+             <input type="text" class="form-control col-md-4" #city>
+       </div> 
+       <div class="form-group form">
+        <label for="uname" ><h5>State:</h5></label>
+        <input type="text" class="form-control col-md-4" #state>
+        </div> 
+        <div class="form-group form">
+            <label for="uname" ><h5>PinCode:</h5></label>
+            <input type="text" class="form-control col-md-4" #pincode required> 
+        </div> 
+            <div class="form-group form">
+            <label for="uname" ><h5>Mobile Number:</h5></label>
+            <input type="text" class="form-control col-md-4" #mobilenumber required>
+        </div> 
+        <br/><br/>
+            <div class="btn-group" style="align-self: center;">
+                <button  class="btn1"> Cancel</button>
+                &nbsp;&nbsp;&nbsp;
+                <button  class="btn1">Register</button>
+            </div>
+    </form>
+    
+</div>

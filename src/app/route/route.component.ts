@@ -1,15 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 
+import { RouteService } from '../services/route.services';
+//import {Pipe,PipeTransform} from '@angular/core';
+
+
+
 @Component({
-  selector: 'app-route',
-  templateUrl: './route.component.html',
-  styleUrls: ['./route.component.css']
-})
-export class RouteComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  selector: 'approute',
+  template:`<div>
+  <h1>
+  {{ route | json }}
+  </h1>
+  </div>`,
+   providers:[RouteService]
+  })
+  export class RouteComponent 
+  {
+     public route;
+     constructor(private routeService:RouteService)
+     {
+       this.routeService.getRouteDetails().subscribe((response)=>
+       {
+        this.route=response;console.log('Received route details:',response);
+         }
+       
+       );
+     }
   }
-
-}
