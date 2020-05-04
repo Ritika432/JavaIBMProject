@@ -18,7 +18,8 @@ import { RegistrationComponent } from './registration/registration.component';
 import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
 import { RouteListComponent } from './route-list/route-list.component';
 import {CustomerComponent} from './customer/customer.component';
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import {RouteComponent} from './route/route.component';
+//import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     RegistrationComponent,
     VehicleListComponent,
     RouteListComponent,
-    CustomerComponent
+    CustomerComponent,
+    RouteComponent
 
   ],
   imports: [
@@ -43,7 +45,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
    
     HttpClientModule,
     BrowserAnimationsModule,
-    MDBBootstrapModule.forRoot()
+   // MDBBootstrapModule.forRoot()
 
   ],
   providers: [],
