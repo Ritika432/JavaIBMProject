@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
 import { VehicleService } from '../services/vehicle.service';
-import {Pipe,PipeTransform} from '@angular/core';
 
 
 

@@ -13,6 +13,7 @@ import { AdminComponent } from './admin/admin.component';
 import { CreditCardComponent } from './credit-card/credit-card.component';
 import { BookingComponent } from './booking/booking.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
+import {RouteComponent} from './route/route.component';
 
 
 
@@ -25,7 +26,7 @@ import { VehicleComponent } from './vehicle/vehicle.component';
     VehicleComponent,
     CreditCardComponent,
     BookingComponent,
-    VehicleComponent,
+    RouteComponent,
   //  LoginComponent,
    // RegistrationComponent,
    // VehicleListComponent,
