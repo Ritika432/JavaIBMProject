@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
 export class CustomerService
 {
     public httpHeaders: HttpHeaders;
+    public  sessionId:string="";
     constructor(private _httpClient: HttpClient) 
     {
          this.httpHeaders=new HttpHeaders()
@@ -15,7 +16,7 @@ export class CustomerService
     }
        addCustomer(newCustomer):Observable<Object>
        {
-         return this._httpClient.post("http://localhost:8080/app/user",JSON.stringify(newCustomer),{headers:this.httpHeaders})
+         return this._httpClient.post("http://localhost:8080/app/admin/user",JSON.stringify(newCustomer),{headers:this.httpHeaders})
        }
        updateCustomer(newCustomer,id):Observable<Object>
        {
