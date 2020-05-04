@@ -1,0 +1,19 @@
+body{
+    background-color: rgb(218, 218, 184);
+}
+
+nav ul a{
+    margin-right: 30px;
+}
+
+form{
+    padding: 30px;
+    margin: 180px auto; 
+    width:450px;
+}
+.container{
+    margin-top: 10%;
+}
+h2{
+    font-family: 'Kaushan Script';
+}

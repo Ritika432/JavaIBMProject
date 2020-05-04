@@ -6,10 +6,13 @@ import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
 import {FormsModule , ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AdminComponent } from './admin/admin.component';
+import { CreditCardComponent } from './credit-card/credit-card.component';
+import { BookingComponent } from './booking/booking.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
-
 
 
 
@@ -19,9 +22,14 @@ import { VehicleComponent } from './vehicle/vehicle.component';
 @NgModule({
   declarations: [
     AppComponent,
-    VehicleComponent
-
-    
+    VehicleComponent,
+    CreditCardComponent,
+    BookingComponent,
+    VehicleComponent,
+  //  LoginComponent,
+   // RegistrationComponent,
+   // VehicleListComponent,
+   // RouteListComponent,
 
   ],
   imports: [
@@ -32,6 +40,7 @@ import { VehicleComponent } from './vehicle/vehicle.component';
    
     HttpClientModule,
     BrowserAnimationsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
