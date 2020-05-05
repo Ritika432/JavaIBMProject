@@ -47,6 +47,7 @@ body{
 	height: 500px;
 	justify-content: flex-end;
 	align-items: center;
+	position: relative;
 	transform: translate(-50px,90px);
 
 	}
