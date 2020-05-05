@@ -20,7 +20,7 @@ this.httpHeaders=new HttpHeaders()
  getVehicle():Observable<Object>
  {
    
-    return this._httpClient.get('http://localhost:8080/app/vehicle/',{headers:this.httpHeaders});
+    return this._httpClient.get('http://localhost:8080/app/vehicle',{headers:this.httpHeaders});
  }
  addVehicle(vehicleObj,sessionId): Observable<Object>
   {
