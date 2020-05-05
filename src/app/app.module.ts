@@ -19,6 +19,7 @@ import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
 import { RouteListComponent } from './route-list/route-list.component';
 import {CustomerComponent} from './customer/customer.component';
 import {RouteComponent} from './route/route.component';
+import { DriverComponent } from './driver/driver.component';
 //import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 
@@ -34,7 +35,8 @@ import {RouteComponent} from './route/route.component';
     VehicleListComponent,
     RouteListComponent,
     CustomerComponent,
-    RouteComponent
+    RouteComponent,
+    DriverComponent
 
   ],
   imports: [

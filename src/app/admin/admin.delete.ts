@@ -11,9 +11,11 @@ import { Vehicle } from './admin.model';
   providers:  [ AdminService ],
   styleUrls: ['./admin.post.css']
 })
-export class AdminDelete implements OnInit {
+export class AdminDelete  {
 
 
+
+ vehicle : Vehicle = new Vehicle();
 
   
   constructor(public adminService: AdminService) 
@@ -21,12 +23,19 @@ export class AdminDelete implements OnInit {
   {
    
   }
+  deleteVehicle(vehicleid:number) {
+
+
+    this.adminService.deleteVehicleDetails(vehicleid)
+    .subscribe(data => { alert ("Vehicle deleted successfully");
+  });
 
  
-
-  ngOnInit(): void {
-   
   }
 
- 
 }
+
+
+
+
+  

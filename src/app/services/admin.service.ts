@@ -34,7 +34,7 @@ addVehicleDetails(vehicleObj:Object): Observable<Object> {
 
 
 deleteVehicleDetails(vehicleid:number): Observable<Object> {
-    return this._httpClient.put( `${this.baseurl}/${vehicleid}` ,{headers:this.httpHeaders.set('authtoken',this.sessionId)});
+    return this._httpClient.delete( `${this.baseurl}/${vehicleid}` ,{headers:this.httpHeaders.set('authtoken',this.sessionId)});
   } 
 
 
