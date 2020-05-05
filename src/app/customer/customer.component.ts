@@ -41,7 +41,8 @@ export class CustomerComponent implements OnInit {
        pincode:pincode.value,
        mobileNo:mobilenumber.value,
        emailId:emailId.value,
-       password:password.value
+       password:password.value,
+       userType:"C"
      }
      //console.log("Customer added"+this.newCustomer.toString())
      

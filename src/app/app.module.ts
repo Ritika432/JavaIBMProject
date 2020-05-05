@@ -16,6 +16,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
 import { RouteListComponent } from './route-list/route-list.component';
 import {CustomerComponent} from './customer/customer.component';
+import {AdministratorComponent} from './customer/administrator.component';
 import {RouteComponent} from './route/route.component';
 import { DriverComponent } from './driver/driver.component';
 
@@ -34,7 +35,8 @@ import { DriverComponent } from './driver/driver.component';
     RouteListComponent,
     CustomerComponent,
     RouteComponent,
-    DriverComponent
+    DriverComponent,
+    AdministratorComponent
 
   ],
   imports: [
