@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
   
 import { Injectable} from '@angular/core';
 import {HttpClient,HttpHeaders} from '@angular/common/http';
@@ -40,6 +41,8 @@ deleteVehicleDetails(vehicleid:number): Observable<Object> {
 
 
 =======
+=======
+>>>>>>> background added
   
 import { Injectable} from '@angular/core';
 import {HttpClient,HttpHeaders} from '@angular/common/http';
@@ -80,5 +83,4 @@ deleteVehicleDetails(vehicleid:number): Observable<Object> {
   } 
 
 
->>>>>>> gouravFiles import
 }
