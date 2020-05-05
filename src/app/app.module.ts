@@ -50,7 +50,9 @@ import { DriverComponent } from './driver/driver.component';
    // MDBBootstrapModule.forRoot()
 
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    HttpClientModule,
+  ],
+
 })
 export class AppModule { }
