@@ -38,7 +38,7 @@
                     </thead>
                     <tbody>
                     
-                        <tr *ngFor="let list of vehiclelist | async">
+                        <tr *ngFor="let list of vehiclelist | async | json">
                         <td>{{list.name}}</td>
                         <td>{{list.type}}</td>
                         <td>{{list.registrationNumber}}</td>

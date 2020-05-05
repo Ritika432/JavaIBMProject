@@ -1,8 +1,9 @@
-
 <div class ="container">
+
     <form>
     <h1>Register Yourself</h1>
     <br/>
+        <h3 class="register-heading">Register as a Customer</h3>
         <div class="form-group form">
              <label for="uname" ><h5>First Name :</h5></label>
              <input  type="text" class="form-control col-md-4" #firstname placeholder="Enter title " required>
@@ -66,6 +67,10 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <button  class="btn1" (click)="setCustomer(firstname,lastname,dateOfBirth,male,female,street,location,city,state,pincode,mobilenumber,emailId,password)">Register</button>
             </div>
+
+            <br>
+              
+            {{newCustomer | json}}
     </form>
-    {{newCustomer | json}}
+  
 </div>

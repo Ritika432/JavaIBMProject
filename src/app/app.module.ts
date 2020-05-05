@@ -18,7 +18,7 @@ import { RouteListComponent } from './route-list/route-list.component';
 import {CustomerComponent} from './customer/customer.component';
 import {RouteComponent} from './route/route.component';
 import { DriverComponent } from './driver/driver.component';
-//import { MDBBootstrapModule } from 'angular-bootstrap-md';
+
 
 
 @NgModule({
@@ -44,13 +44,12 @@ import { DriverComponent } from './driver/driver.component';
     AppRoutingModule,
    
     HttpClientModule,
-    BrowserAnimationsModule,
-   // MDBBootstrapModule.forRoot()
+    BrowserAnimationsModule
 
   ],
   providers: [
     HttpClientModule,
   ],
-
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
