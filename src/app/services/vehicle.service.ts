@@ -20,18 +20,18 @@ this.httpHeaders=new HttpHeaders()
  getVehicle():Observable<Object>
  {
    
-    return this._httpClient.get('http://localhost:8080/app/admin/vehicle/',{headers:this.httpHeaders});
+    return this._httpClient.get('http://localhost:8080/app/vehicle/',{headers:this.httpHeaders});
  }
  addVehicle(vehicleObj,sessionId): Observable<Object>
   {
-    return this._httpClient.post('http://localhost:8080/app/admin/vehicle',JSON.stringify(vehicleObj),{headers:this.httpHeaders.set('authtoken',sessionId)});
+    return this._httpClient.post('http://localhost:8080/app/vehicle',JSON.stringify(vehicleObj),{headers:this.httpHeaders.set('authtoken',sessionId)});
   }
   updateVehicle(routeObj,sessionId,id): Observable<Object> 
   {
-    return this._httpClient.put('http://localhost:8080/app/admin/vehicle/ '+id,JSON.stringify(routeObj),{headers:this.httpHeaders.set('authtoken',sessionId)});
+    return this._httpClient.put('http://localhost:8080/app/vehicle/ '+id,JSON.stringify(routeObj),{headers:this.httpHeaders.set('authtoken',sessionId)});
   }
  deleteVehicle(sessionId):Observable<Object>
  {
-    return this._httpClient.post('http://localhost:8080/app/admin/vehicle',{headers:this.httpHeaders.set('authtoken',sessionId)});
+    return this._httpClient.post('http://localhost:8080/app/vehicle',{headers:this.httpHeaders.set('authtoken',sessionId)});
  }
 }
