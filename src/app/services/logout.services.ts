@@ -3,19 +3,19 @@ import {HttpClient,HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 
 @Injectable()
-export class LoginService{
+export class LogoutService{
 
     public httpHeaders:HttpHeaders;
 
     constructor(private _httpClient: HttpClient){
-        this.httpHeaders=new HttpHeaders()
+        this.httpHeaders=new HttpHeaders()  
         .set('allow-origin-access-control','*')
         .set('Content-type','application/json');
       }
 
-      getUser(userObj) : Observable<Object> {
+      deleteUser(sessionId) : Observable<Object> {
 
-        return this._httpClient.post( 'http://localhost:8080/app/admin/user/login' ,JSON.stringify(userObj) , {headers: this.httpHeaders})  ;
+        return this._httpClient.post( 'http://localhost:8080/app/admin/user/logout' , {headers: this.httpHeaders.set('authtoken',sessionId)})  ;
         }
 
 
