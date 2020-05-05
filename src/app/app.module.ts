@@ -5,8 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-
 import {FormsModule , ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminComponent } from './admin/admin.component';
@@ -19,6 +17,7 @@ import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
 import { RouteListComponent } from './route-list/route-list.component';
 import {CustomerComponent} from './customer/customer.component';
 import {RouteComponent} from './route/route.component';
+import { DriverComponent } from './driver/driver.component';
 //import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 
@@ -34,7 +33,8 @@ import {RouteComponent} from './route/route.component';
     VehicleListComponent,
     RouteListComponent,
     CustomerComponent,
-    RouteComponent
+    RouteComponent,
+    DriverComponent
 
   ],
   imports: [
@@ -48,7 +48,9 @@ import {RouteComponent} from './route/route.component';
    // MDBBootstrapModule.forRoot()
 
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    HttpClientModule,
+  ],
+
 })
 export class AppModule { }
