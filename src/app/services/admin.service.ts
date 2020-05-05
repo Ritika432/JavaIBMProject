@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
   
 import { Injectable} from '@angular/core';
 import {HttpClient,HttpHeaders} from '@angular/common/http';
@@ -39,48 +37,17 @@ deleteVehicleDetails(vehicleid:number): Observable<Object> {
     return this._httpClient.delete( `${this.baseurl}/${vehicleid}` ,{headers:this.httpHeaders.set('authtoken',this.sessionId)});
   } 
 
-
-=======
-=======
->>>>>>> background added
+  addDriverDetails(driverObj,sessionId:string): Observable<Object> {
+    return this._httpClient.post('http://localhost:8080/app/driver',JSON.stringify(driverObj),{headers:this.httpHeaders.set('authtoken',sessionId)});
+  }
   
-import { Injectable} from '@angular/core';
-import {HttpClient,HttpHeaders} from '@angular/common/http';
-import {Observable} from 'rxjs';
-
-@Injectable()
-export class AdminService{
-
-  public httpHeaders:HttpHeaders;
-  public sessionId:   string="";
-
-  public baseurl = 'http://localhost:8080/app/vehicle';
-
-  constructor(private _httpClient: HttpClient){
-    this.httpHeaders=new HttpHeaders()
-    .set('allow-origin-access-control','*')
-    .set('Content-type','application/json');
+  deleteDriverDetails(driverid:Number): Observable<Object> {
+    return this._httpClient.delete('http://localhost:8080/app/driver/',{headers:this.httpHeaders});
   }
-
-
-getVehicle(vehicleid:number) : Observable<Object> {
-
-return this._httpClient.get( `${this.baseurl}/${vehicleid}` , {headers: this.httpHeaders});
-}
-
-
-addVehicleDetails(vehicleObj:Object): Observable<Object> {
-    return this._httpClient.post(`${this.baseurl}`,JSON.stringify(vehicleObj),{headers:this.httpHeaders.set('authtoken',this.sessionId)});
+ 
+  updateDriverDetails(driverObj,sessionId): Observable<Object> {
+    return this._httpClient.put('http://localhost:8080/app/driver/',JSON.stringify(driverObj),{headers:this.httpHeaders.set('authtoken',sessionId)});
   }
-
-  updateVehicleDetails(vehicleid:number , vehicleObj:Object): Observable<Object> {
-    return this._httpClient.put(`${this.baseurl}/${vehicleid}`,JSON.stringify(vehicleObj),{headers:this.httpHeaders.set('authtoken',this.sessionId)});
-  }
-
-
-deleteVehicleDetails(vehicleid:number): Observable<Object> {
-    return this._httpClient.put( `${this.baseurl}/${vehicleid}` ,{headers:this.httpHeaders.set('authtoken',this.sessionId)});
-  } 
 
 
 }
