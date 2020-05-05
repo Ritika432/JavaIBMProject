@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class AdminComponent implements OnInit {
 
-  vehiclelist : Observable<Object>;
+  vehiclelist : Observable <Object>;
   vehicleid : number;
   
   constructor(public adminService: AdminService) 
