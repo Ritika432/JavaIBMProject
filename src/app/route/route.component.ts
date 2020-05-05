@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
 import { RouteService } from '../services/route.services';
-//import {Pipe,PipeTransform} from '@angular/core';
 
 
 

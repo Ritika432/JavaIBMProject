@@ -16,9 +16,10 @@ import { VehicleComponent } from './vehicle/vehicle.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
-import { RouteListComponent } from './route-list/route-list.component';
 import {CustomerComponent} from './customer/customer.component';
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import {RouteComponent} from './route/route.component';
+
+import { NO_ERRORS_SCHEMA } from "@angular/core"
 
 
 @NgModule({
@@ -31,8 +32,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     LoginComponent,
     RegistrationComponent,
     VehicleListComponent,
-    RouteListComponent,
-    CustomerComponent
+    CustomerComponent,
+    RouteComponent
 
   ],
   imports: [
@@ -40,13 +41,16 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-   
     HttpClientModule,
-    BrowserAnimationsModule,
-    MDBBootstrapModule.forRoot()
+    BrowserAnimationsModule
+    
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [
+    
+    NO_ERRORS_SCHEMA
+  ]
 })
 export class AppModule { }
