@@ -13,7 +13,7 @@ export class LoginService{
         .set('Content-type','application/json');
       }
 
-      getUser(userObj) : Observable<Object> {
+      loginUser(userObj) : Observable<Object> {
 
         return this._httpClient.post( 'http://localhost:8080/app/admin/user/login' ,JSON.stringify(userObj) , {headers: this.httpHeaders})  ;
         }
