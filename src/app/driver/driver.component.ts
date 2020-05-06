@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AdminService } from '../services/admin.service';
+import {DriverService} from '../services/driver.services'
 export class Driver {
 public driverId: String;
 public name: string;
@@ -15,18 +16,20 @@ public licenseNumber: string;
 selector: 'register-driver',
 templateUrl: './driver.component.html',
 //styleUrls: ['./app.component.css']
-providers: [ AdminService ]
+providers: [ AdminService,DriverService ]
 })
 export class DriverComponent {
 public driver;
 model = new Driver();
 public getRegistrationservice;
-constructor(private getService: AdminService)
+constructor(private getService: AdminService,driverService:DriverService)
 {
 this.getRegistrationservice=getService;
+
 }
- onSubmit(name:any,street:any,location:any,city:any,state:any,pincode:any,mobilenumber:any,licensenumber:any)
+ onSubmit(name:any,street:any,location:any,city:any,state:any,pincode:any,mobilenumber:any,licenseNumber:any)
 {
+    console.log(licenseNumber)
 this.getRegistrationservice.Driver({
 "name":name.value,
 "street":street.value,
@@ -35,7 +38,7 @@ this.getRegistrationservice.Driver({
 "state":state.value,
 "pincode":pincode.value,
 "mobileNo":mobilenumber.value,
-"licenseNumber":licensenumber.value
+"licenseNumber":licenseNumber.value
 }
 ).subscribe((response)=> {
 this.driver=response;

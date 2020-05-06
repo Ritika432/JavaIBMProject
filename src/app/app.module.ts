@@ -18,7 +18,7 @@ import { RouteListComponent } from './route-list/route-list.component';
 import {CustomerComponent} from './customer/customer.component';
 import {AdministratorComponent} from './customer/administrator.component';
 import {RouteComponent} from './route/route.component';
-//import { DriverComponent } from './driver/driver.component';
+import { DriverComponent } from './driver/driver.component';
 import {ChangePasswordComponent} from './changePassword/changepassword.component';
 
 
@@ -40,7 +40,7 @@ import {ChangePasswordComponent} from './changePassword/changepassword.component
     RouteComponent,
     AdministratorComponent,
     ChangePasswordComponent,
-    
+    DriverComponent
 
   ],
   imports: [

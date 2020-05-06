@@ -1,13 +1,13 @@
-<p>driver works!</p>
 
-<form #adForm="ngForm" (ngSubmit)="onSubmit(adForm.value)" class="alignMiddle col-md-4 offset-md-4" novalidate>
-    <br>
+
+<!-- <form #adForm="ngForm" (ngSubmit)="onSubmit(adForm.value)" class="alignMiddle col-md-4 offset-md-4" novalidate>
+    <br> -->
 <form #userForm="ngForm" (ngSubmit)="onSubmit(name,street,location,city,state,pincode,mobile,license)">
 
 
 <div class="form-group">
 <label>Name</label>
-<input type="name" class="form-control col-md-4" name="name"  #name="ngModel" [(ngModel)]="model.name" required  minlength="3" >
+<input type="name" class="form-control col-md-4" name="name"  #name="ngModel" [(ngModel)]="name" required  minlength="3" >
   <div *ngIf="name.errors && name.touched" class="alert alert-danger">
     <div [hidden]="name.pristine || name.valid" class="alert alert-danger">
         Please enter name
@@ -21,7 +21,7 @@
 
 <div class="form-group">
 <label>Street</label>
-<input type="street" class="form-control" name="street" #street="ngModel" [(ngModel)]="model.street" required minlength="10">
+<input type="street" class="form-control" name="street" #street="ngModel" [(ngModel)]="street" required minlength="10">
 <div *ngIf="street.errors && street.touched" class="alert alert-danger">
     <div [hidden]="street.pristine || street.valid" class="alert alert-danger">
         Please enter valid street
@@ -35,7 +35,7 @@
 
 <div class="form-group">
 <label>Location</label>
-<input type="location" class="form-control" name="location" #location= "ngModel" [(ngModel)]="model.location" required  minlength="10" >
+<input type="location" class="form-control" name="location" #location= "ngModel" [(ngModel)]="location" required  minlength="10" >
 <div *ngIf="location.errors && location.touched" class="alert alert-danger">
     <div [hidden]="location.pristine || location.valid" class="alert alert-danger">
         Please enter valid location
@@ -49,7 +49,7 @@
 
 <div class="form-group">
 <label>City</label>
-<input type="city" class="form-control" name="city" #city="ngModel" [(ngModel)]="model.city" required  minlength="5" >
+<input type="city" class="form-control" name="city" #city="ngModel" [(ngModel)]="city" required  minlength="5" >
 <div *ngIf="city.errors && city.touched" class="alert alert-danger">
     <div [hidden]="city.pristine || city.valid" class="alert alert-danger">
         Please enter valid city
@@ -63,7 +63,7 @@
 
 <div class="form-group">
 <label>State</label>
-<input type="state" class="form-control" name="state" #state="ngModel" [(ngModel)]="model.state" required  minlength="5">
+<input type="state" class="form-control" name="state" #state="ngModel" [(ngModel)]="state" required  minlength="5">
 <div *ngIf="state.errors && state.touched" class="alert alert-danger">
     <div [hidden]="state.pristine || state.valid" class="alert alert-danger">
         Please enter valid state
@@ -77,7 +77,7 @@
 
 <div class="form-group">
 <label>PinCode</label>
-<input type="pincode" class="form-control" name="pincode" #pincode="ngModel" [(ngModel)]="model.pincode" required  minlength="6" maxlength="6" >
+<input type="pincode" class="form-control" name="pincode" #pincode="ngModel" [(ngModel)]="pincode" required  minlength="6" maxlength="6" >
 <div *ngIf="pincode.errors && pincode.touched" class="alert alert-danger">
 <div [hidden]="pincode.pristine || pincode.valid" class="alert alert-danger">
     Please enter valid pincode
@@ -91,7 +91,7 @@
 
 <div class="form-group">
 <label>Mobilenumber</label>
-<input type="mobilenumber" class="form-control" name="mobilenumber" #mobile="ngModel" [(ngModel)]="model.mobilenumber" required minlength="10"  maxlength="6" >
+<input type="mobilenumber" class="form-control" name="mobilenumber" #mobile="ngModel" [(ngModel)]="mobile" required minlength="10"  maxlength="6" >
 <div *ngIf="mobilenumber.errors && pincode.touched" class="alert alert-danger">
 <div [hidden]="mobilenumber.pristine || mobilenumber.valid" class="alert alert-danger">
     Please enter valid mobilenumber
@@ -105,7 +105,7 @@
 
 <div class="form-group">
 <label>LicenseNumber</label>
-<input type="licencenumber" class="form-control" name="licensenumber" #license="ngModel" [(ngModel)]="model.licensenumber" required minlength="10" maxlength="10" >
+<input type="licencenumber" class="form-control" name="licensenumber" #license="ngModel" [(ngModel)]="license" required minlength="10" maxlength="10" >
 <div *ngIf="licensenumber.errors && licensenumber.touched" class="alert alert-danger">
 <div [hidden]="licensenumber.pristine || mobilenumber.valid" class="alert alert-danger">
     Please enter valid licencenumber
@@ -122,9 +122,10 @@
 
 </div>
 </form>
-</form>
+<!-- </form> -->
 
 
 
 
 
+ 
