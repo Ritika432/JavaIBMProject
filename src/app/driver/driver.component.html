@@ -3,35 +3,101 @@
 <form #userForm="ngForm" (ngSubmit)="onSubmit(name,street,location,city,state,pincode,mobile,license)">
 <div class="form-group">
 <label>Name</label>
-<input type="name" class="form-control" name="name" #name [(ngModel)]="name" required>
+<input type="name" class="form-control" name="name" #name [(ngModel)]="name" required minlength="3" #name #nameModelRef>
+<div *ngIf="nameModelRef.errors && nameModelRef.touched" class="alert alert-danger">
+<div [hidden]="name.pristine || name.valid" class="alert alert-danger">
+    Please enter name
+</div>
+<div [hidden]="name.errors.minlength" class="alert alert-danger">
+    Name should be minimum 3 characters long
+</div>
+</div>
 </div>
 <div class="form-group">
 <label>Street</label>
-<input type="street" class="form-control" name="street" #street [(ngModel)]="model.street" required>
+<input type="street" class="form-control" name="street" #street [(ngModel)]="model.street" required minlength="10" #street #streetModelRef>
+<div *ngIf="streetModelRef.errors && streetModelRef.touched" class="alert alert-danger">
+    <div [hidden]="street.pristine || street.valid" class="alert alert-danger">
+        Please enter valuid street
+    </div>
+    <div [hidden]="street.errors.minlength" class="alert alert-danger">
+        street should be minimum 10 characters long
+    </div>
+</div>
 </div>
 <div class="form-group">
 <label>Location</label>
-<input type="location" class="form-control" name="location" #location [(ngModel)]="model.location" required>
+<input type="location" class="form-control" name="location" #location [(ngModel)]="model.location" required  minlength="10" #location #locationModelRef>
+<div *ngIf="locationModelRef.errors && locationModelRef.touched" class="alert alert-danger">
+    <div [hidden]="location.pristine || location.valid" class="alert alert-danger">
+        Please enter valid location
+    </div>
+    <div [hidden]="location.errors.minlength" class="alert alert-danger">
+        location should be minimum 10 characters long
+    </div>
+</div>
 </div>
 <div class="form-group">
 <label>City</label>
-<input type="city" class="form-control" name="city" #city [(ngModel)]="model.city" required>
+<input type="city" class="form-control" name="city" #city [(ngModel)]="model.city" required  minlength="5" #city #cityModelRef>
+<div *ngIf="cityModelRef.errors && cityModelRef.touched" class="alert alert-danger">
+    <div [hidden]="city.pristine || city.valid" class="alert alert-danger">
+        Please enter valid city
+    </div>
+    <div [hidden]="city.errors.minlength" class="alert alert-danger">
+        city should be minimum 10 characters long
+    </div>
+</div>
 </div>
 <div class="form-group">
 <label>State</label>
-<input type="state" class="form-control" name="state" #state [(ngModel)]="model.state" required>
+<input type="state" class="form-control" name="state" #state [(ngModel)]="model.state" required  minlength="5" #state #stateModelRef>
+<div *ngIf="stateModelRef.errors && stateModelRef.touched" class="alert alert-danger">
+    <div [hidden]="state.pristine || state.valid" class="alert alert-danger">
+        Please enter valid state
+    </div>
+    <div [hidden]="state.errors.minlength" class="alert alert-danger">
+        state should be minimum 10 characters long
+    </div>
+</div>
 </div>
 <div class="form-group">
 <label>PinCode</label>
-<input type="pincode" class="form-control" name="pincode" #pincode [(ngModel)]="model.pincode" required>
+<input type="pincode" class="form-control" name="pincode" #pincode [(ngModel)]="model.pincode" required  minlength="6" #pincode #pincodeModelRef>
+<div *ngIf="pincodeModelRef.errors && pincodeModelRef.touched" class="alert alert-danger">
+<div [hidden]="pincode.pristine || pincode.valid" class="alert alert-danger">
+    
+    Please enter valid pincode
+</div>
+<div [hidden]="state.errors.minlength" class="alert alert-danger">
+    pincode should be 6 characters long
+</div>
+</div>
 </div>
 <div class="form-group">
 <label>Mobilenumber</label>
-<input type="mob" class="form-control" name="mobileNumber" #mobile [(ngModel)]="model.mobileNumber" required>
+<input type="mob" class="form-control" name="mobilenumber" #mobile [(ngModel)]="model.mobilenumber" required minlength="10" #mobilenumber #mobilenumberModelRef>
+<div *ngIf="mobilenumberModelRef.errors && pincodeModelRef.touched" class="alert alert-danger">
+<div [hidden]="mobilenumber.pristine || mobilenumber.valid" class="alert alert-danger">
+    Please enter valid mobilenumber
+</div>
+<div [hidden]="mobilenumber.errors.minlength" class="alert alert-danger">
+    mobilenumber should be minimum 10 characters long
+</div>
+</div>
 </div>
 <div class="form-group">
 <label>LicenseNumber</label>
-<input type="email" class="form-control" name="licenseNumber" #license [(ngModel)]="model.LicenseNumber" required>
+<input type="licencenumber" class="form-control" name="licensenumber" #license [(ngModel)]="model.licensenumber" required minlength="10" #licencenumber #licencenumberModelRe>
+<div *ngIf="licensenumberModelRef.errors && licensenumberModelRef.touched" class="alert alert-danger">
+
+<div [hidden]="licensenumber.pristine || mobilenumber.valid" class="alert alert-danger">
+    Please enter valid licencenumber
+</div>
+<div [hidden]="mobilenumber.errors.minlength" class="alert alert-danger">
+    licencenumber should be minimum 10 characters long
+</div>
+</div>
 </div>
 <div class="form-group">
 <button class="btn btn-danger btn-block" >Submit</button>
