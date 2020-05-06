@@ -44,12 +44,12 @@ updateVehicle(vehicleid:any,name:any,type:any,registrationNumber:any,seatingCapa
 
 
     this.adminService.updateVehicleDetails(this.id, this.Vehicle).subscribe(
-      (response)=>{console.log("Vehicle added"+response.toString())}
+      (response)=>{console.log("Vehicle updated"+response.toString())}
       );
     
   
  
-    alert("Vehicle Data Updated Successfully");
+   
   }
 
  
