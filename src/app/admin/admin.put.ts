@@ -7,9 +7,9 @@ import { Vehicle } from './admin.model';
 
 @Component({
   selector: 'app-admin-put',
-  templateUrl: './admin.post.html',
+  templateUrl: './admin.put.html',
   providers:  [ AdminService ],
-  styleUrls: ['./admin.post.css']
+  styleUrls: ['./admin.put.css']
 })
 export class AdminPut implements OnInit {
 

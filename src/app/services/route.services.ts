@@ -13,7 +13,7 @@ export class RouteService{
     .set('Content-type','application/json');
   }
   getRouteDetails(): Observable<Object> {
-    return this._httpClient.get('http://localhost:8080/app/route/1',{headers:this.httpHeaders});
+    return this._httpClient.get('http://localhost:8080/app/route',{headers:this.httpHeaders});
   }
   deleteRouteDetails(sessionId): Observable<Object> {
     return this._httpClient.delete('http://localhost:8080/app/route/{routeId} ',{headers:this.httpHeaders.set('authToken',sessionId)});
