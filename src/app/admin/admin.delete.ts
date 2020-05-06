@@ -14,8 +14,10 @@ import { Vehicle } from './admin.model';
 export class AdminDelete  {
 
 
-
- vehicle : Vehicle = new Vehicle();
+  vehiclelist : Observable <Object>;
+  vehicleid : number;
+  
+  vehicle : Vehicle = new Vehicle();
 
   
   constructor(public adminService: AdminService) 
@@ -23,10 +25,20 @@ export class AdminDelete  {
   {
    
   }
+
+   
+  getData() {
+    
+    this.vehiclelist=this.adminService.getVehicle(this.vehicleid);
+
+  }
+
+
+
   deleteVehicle(vehicleid:number) {
 
 
-    this.adminService.deleteVehicleDetails(vehicleid)
+    this.adminService.deleteVehicleDetails(this.vehicleid)
     .subscribe(data => { alert ("Vehicle deleted successfully");
   });
 

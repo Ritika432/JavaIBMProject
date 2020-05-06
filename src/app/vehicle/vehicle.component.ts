@@ -5,7 +5,7 @@ import { VehicleService } from '../services/vehicle.service';
 
 
 @Component({
-  selector: 'appvehicle',
+  selector: 'app-vehicle',
   // template:`<div>
   // <h1>
   // {{ vehicles | json }}
