@@ -25,7 +25,7 @@ constructor(private getService: AdminService)
 {
 this.getRegistrationservice=getService;
 }
- onSubmit(name:any,street:any,location:any,city:any,state:any,pincode:any,mobile:any,license:any)
+ onSubmit(name:any,street:any,location:any,city:any,state:any,pincode:any,mobilenumber:any,licensenumber:any)
 {
 this.getRegistrationservice.Driver({
 "name":name.value,
@@ -34,8 +34,8 @@ this.getRegistrationservice.Driver({
 "city":city.value,
 "state":state.value,
 "pincode":pincode.value,
-"mobileNo":mobile.value,
-"licenseNumber":license.value
+"mobileNo":mobilenumber.value,
+"licenseNumber":licensenumber.value
 }
 ).subscribe((response)=> {
 this.driver=response;
