@@ -18,15 +18,9 @@ import {AdministratorComponent} from './customer/administrator.component';
 import {RouteComponent} from './route/route.component';
 import { DriverComponent } from './driver/driver.component';
 import {ChangePasswordComponent} from './changePassword/changepassword.component';
-<<<<<<< Updated upstream
 import {RouterModule, Router} from '@angular/router';
 import {LogoutComponent} from './logout/logout.component';
-
-
-
-=======
 import {DashBoardComponent} from './dashboard/dashboard.component'
->>>>>>> Stashed changes
 
 
 @NgModule({
@@ -43,13 +37,9 @@ import {DashBoardComponent} from './dashboard/dashboard.component'
     RouteComponent,
     AdministratorComponent,
     ChangePasswordComponent,
-<<<<<<< Updated upstream
     DriverComponent,
-    LogoutComponent
-
-=======
+    LogoutComponent,
     DashBoardComponent
->>>>>>> Stashed changes
   ],
   imports: [
     BrowserModule,
