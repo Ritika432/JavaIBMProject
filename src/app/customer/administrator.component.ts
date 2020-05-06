@@ -4,8 +4,8 @@ import {Customer} from './customer.model';
 
 @Component({
   selector: 'app-administrator',
-  templateUrl: './administrator.component.html',
-  styleUrls: ['./administrator.component.css'],
+  templateUrl: './registration.admin.html',
+  styleUrls: ['./registration.admin.css'],
   providers:[CustomerService]
 })
 export class AdministratorComponent implements OnInit {

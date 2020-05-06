@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule , ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -12,7 +11,6 @@ import { CreditCardComponent } from './credit-card/credit-card.component';
 import { BookingComponent } from './booking/booking.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { LoginComponent } from './login/login.component';
-import { RegistrationComponent } from './registration/registration.component';
 import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
 import { RouteListComponent } from './route-list/route-list.component';
 import {CustomerComponent} from './customer/customer.component';
@@ -20,11 +18,15 @@ import {AdministratorComponent} from './customer/administrator.component';
 import {RouteComponent} from './route/route.component';
 import { DriverComponent } from './driver/driver.component';
 import {ChangePasswordComponent} from './changePassword/changepassword.component';
+<<<<<<< Updated upstream
 import {RouterModule, Router} from '@angular/router';
 import {LogoutComponent} from './logout/logout.component';
 
 
 
+=======
+import {DashBoardComponent} from './dashboard/dashboard.component'
+>>>>>>> Stashed changes
 
 
 @NgModule({
@@ -35,16 +37,19 @@ import {LogoutComponent} from './logout/logout.component';
     BookingComponent,
     VehicleComponent,
     LoginComponent,
-    RegistrationComponent,
     VehicleListComponent,
     RouteListComponent,
     CustomerComponent,
     RouteComponent,
     AdministratorComponent,
     ChangePasswordComponent,
+<<<<<<< Updated upstream
     DriverComponent,
     LogoutComponent
 
+=======
+    DashBoardComponent
+>>>>>>> Stashed changes
   ],
   imports: [
     BrowserModule,
