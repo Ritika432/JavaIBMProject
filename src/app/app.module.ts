@@ -20,6 +20,8 @@ import {AdministratorComponent} from './customer/administrator.component';
 import {RouteComponent} from './route/route.component';
 import { DriverComponent } from './driver/driver.component';
 import {ChangePasswordComponent} from './changePassword/changepassword.component';
+import {RouterModule, Router} from '@angular/router';
+import {LogoutComponent} from './logout/logout.component';
 
 
 
@@ -40,7 +42,8 @@ import {ChangePasswordComponent} from './changePassword/changepassword.component
     RouteComponent,
     AdministratorComponent,
     ChangePasswordComponent,
-    DriverComponent
+    DriverComponent,
+    LogoutComponent
 
   ],
   imports: [
@@ -50,7 +53,8 @@ import {ChangePasswordComponent} from './changePassword/changepassword.component
     AppRoutingModule,
    
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    RouterModule
 
   ],
   providers: [
