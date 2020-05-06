@@ -13,8 +13,7 @@ import { Vehicle } from './admin.model';
 })
 export class AdminPost implements OnInit {
 
- vehicle : Vehicle = new Vehicle();
-
+public Vehicle:Object;
 
   
   constructor(public adminService: AdminService) 
@@ -23,20 +22,34 @@ export class AdminPost implements OnInit {
    
   }
 
- addVehicle(): void {
+  ngOnInit(): void {
+   
+  }
 
 
-  this.adminService.addVehicleDetails(this.vehicle)
-  .subscribe(data => { alert ("Vehicle added successfully");
-});
+ addVehicle(name:any,type:any,registrationNumber:any,seatingCapacity:any,farePerKm:any) {
+
+
+  this.Vehicle = {
+
+  name:name.value,
+  type:type.value,
+  registrationNumber:registrationNumber.value,
+  scap:seatingCapacity.value,
+  fare:farePerKm.value
+
+}
+
+this.adminService.addVehicleDetails(this.Vehicle).subscribe(
+  (response)=>{console.log("Vehicle added"+response.toString())}
+  );
+
+
 
 
 
  }
 
-  ngOnInit(): void {
-   
-  }
-
+ 
  
 }
