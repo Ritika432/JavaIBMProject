@@ -21,13 +21,15 @@
           <img id="top-image2" src="../../assets/images/undraw_toy_car_7umw.svg" style="height:100px">
       </div>
 
-
-      <form>
+    </div>
+        
+    
+        <form class= "custom" >
         <h1>Add Vehicle</h1>
         <br/>
       
             
-            <div class="form-group form">
+            <div class="form-group form" >
                  <label for="name" ><h5>Name :</h5></label>
                  <input  type="text" class="form-control col-md-4" #name  required>
            </div>
@@ -51,13 +53,18 @@
 
             <br/><br/>
                 
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <button  class="btn1" (click)="addVehicle(name,type,registrationNumber,seatingCapacity,farePerKm)" >ADD</button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    
+                    <button  class="btn1" class="custombtn" (click)="addVehicle(name,type,registrationNumber,seatingCapacity,farePerKm)"   >ADD</button>
                 
         </form>
 
 
         <div id="footer-container">
+            
             <footer>
                     <div class="social">
                         <a href="#" class="fa fa-youtube" id="social-icon"style="color: rgb(255, 255, 255); "></a>
@@ -69,6 +76,7 @@
                    
             </footer>
             </div>
+        
 
 
 

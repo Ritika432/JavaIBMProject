@@ -23,6 +23,8 @@ import {ChangePasswordComponent} from './changePassword/changepassword.component
 
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +39,8 @@ import {ChangePasswordComponent} from './changePassword/changepassword.component
     CustomerComponent,
     RouteComponent,
     AdministratorComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    
 
   ],
   imports: [

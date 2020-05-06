@@ -21,13 +21,15 @@
           <img id="top-image2" src="../../assets/images/undraw_toy_car_7umw.svg" style="height:100px">
       </div>
         
+      
         
-        <label >Vehicle Id</label>
-        <input (input)="vehicleid=$event.target.value" type="text" class="form-control">
-        <button class="btn btn-success" (click)="getData()">Get Details</button>
-        <input (input)="vehicleid=$event.target.value" type="text" class="form-control">
-        <button class="btn btn-success" (click)="deleteVehicle()">Delete Details</button>
-    
+    <div class="form-group form">
+        <label for="getdetails" ><h5>Vehicle Id:</h5></label>
+        <input type="text" class="form-control col-md-4" #deletedetails required>
+    </div> 
+
+    <button  class="btn2" (click)="getData(deletedetails)" >Get Details</button>
+    <button  class="btn2" (click)="deleteVehicle(deletedetails)" >Delete Details</button>
                 
         <div class="col-xs-12">
             <div class="table-responsive">
@@ -56,7 +58,6 @@
             </div>
         </div>
     </div>
-</div>
 
 <div id="footer-container">
 <footer>
