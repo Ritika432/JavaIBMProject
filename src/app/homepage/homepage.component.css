@@ -1,0 +1,118 @@
+
+*
+{
+    margin:0;
+    padding:0;
+}
+body
+{
+    font-family:sans-serif;
+}
+
+#nav-bar
+{
+position:sticky;
+top:0;
+z-index:10;
+}
+
+.navbar
+{
+    background-image:linear-gradient(to right,#2980b9, #6dd5fa);
+    padding: 0 !important;
+} 
+
+.navbar-brand
+{
+height:40px;
+padding-right: 20px;
+}
+
+.navbar-nav li{
+    padding :0 10px;
+
+}
+
+.navbar-nav li a{
+    color: #fff !important;
+    font-weight: 600;
+    float: right;
+    text-align: left;
+}
+
+.fa-bars
+{
+    color:#fff;
+    font-size: 30px !important;
+}
+
+.navbar-toggler
+{
+    outline:none !important;
+}
+#banner
+{
+    background-image:linear-gradient(to right,#2980b9, #6dd5fa);
+    color:#fff;
+    padding-top:5%;
+}
+.promo-title1
+{
+    font-size: 40px;
+    font-weight: 600;
+    margin-top:100px;
+    animation-direction: alternate;
+}
+
+#services
+{
+    padding:80px 0;
+}
+
+.service-img
+{
+    width:300px;
+    margin-top:20px;
+}
+.services h4
+{
+    padding:5px;
+    margin-top:25px;
+    text-transform: uppercase;
+}
+
+.title::before{
+    content:'';
+    background:#7b1798;
+    height:5px;
+    width:200px;
+    margin-top: auto;
+    margin-right: auto;
+    display:block;
+    transform:translateY(63px);
+
+
+}
+
+#services .btn-primary
+{
+    box-shadow: none;
+    padding:8px 25px;
+    border:none;
+    border-radius: 20px;
+    background-image:linear-gradient(to right,#2980b9, #6dd5fa);
+}
+
+#about-us
+{
+    background: #f8f9fa;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.about-title
+{
+    font-size: 40px;
+    font-weight: 600;
+    margin-top:8%;
+}

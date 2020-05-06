@@ -88,24 +88,24 @@ label
         font-size: 1.3em;
         border-radius: 5px;
         background-color: rgb(100, 33, 102);
-        transform: translate(575px,-15px);
+        transform: translate(650px,-15px);
     }
     a:hover{
       transform: scale(1.1);
     }
     .btn2
-{
-	border: 2px solid black ;
-	padding: 10px 20px;
-	color:dodgerblue;
-	font-size:20px;
-	text-decoration: none;
-	transition: 0.6s ease;
-	border-radius: 20px;
-}
-.btn2:hover
-{
-	background-color:dodgerblue ;
-	color: white; 
-
-}
+    {
+      border: 2px solid black ;
+      padding: 10px 20px;
+      color:dodgerblue;
+      font-size:20px;
+      text-decoration: none;
+      transition: 0.6s ease;
+      border-radius: 20px;
+    }
+    .btn2:hover
+    {
+      background-color:dodgerblue ;
+      color: white; 
+    
+    }
