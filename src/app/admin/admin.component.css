@@ -1,61 +1,111 @@
-.custom {
-
-    height:100vh
+html,body{
+    display: block;
 }
-
-.custombox {
-   width: 400px; 
-}
-
 body{
-    background:#121212;
-    font-family: sans-serif;
-    color:#ccc;
-    padding:15px
+    width: 100%;
+    overflow-x: hidden;
+}
+p{
+    margin: 0%;
+    padding: 0%;
+    transform: translate(40px,20px);
 }
 
-.table>thead>tr>th{border-bottom: none;}
-.exotic-table{
-    color:#fff;
-    background: #191919;
-    text-align: center;
-    border: none;
+
+nav li{
+    background-color: rgb(91, 196, 152);
+    border-radius: 5px; 
+    margin:1px 25px;
+
 }
-.exotic-table thead tr{
-    border: 2px #333 outset;
-    text-align: center;
+nav{
+    background-color: rgb(91, 196, 152);
 }
-.exotic-table thead>tr>th{
-    text-align: center;
+h3{
+    font-weight: bold;
 }
-.exotic-table tbody{
-    border:2px outset #333;
-    border-top:none
+.container{
+    transform: translateY(-70px);
+}
+#welcome{
+    margin: 0px;
+    padding: 0px;
+}
+#page-title{
+    margin-left: 450px;
+    transform: translateY(100px);
+    font-family: 'Kaushan Script';
+    font-weight: bolder;
+    color: rgb(56, 102, 100);
+    /* float: right; */
+}
+#vehicle-list{
+    height: 100px;
+    margin-left: 980px;
+    transform: translateY(170px);
+}
+tr th{
+    
+    text-align: center;
+    font-weight: bolder;
+    padding: 15px;
+}
+td{
+    text-align: center;
+    background-color: rgb(238, 248, 236);
+   
 }
 
-.exotic-table tbody tr{
-    background: #222;
+#footer-container{
+    background-color:rgb(4, 85, 54);
+    height: 50px;
+    width: 100%;
+    padding: 90px;
+    transform: translateY(311px);
+    position: absolute;
 }
-.exotic-table tbody tr:hover{
-    box-shadow:0 0 20px #000;
-    background:#1a1a1a;
+footer{
+	position: relative;
+    align-items: center;
+
 }
-.exotic-table tbody tr td{
-    border-bottom:2px outset #333;
+footer p{
+	font-family: calibri;
+	font-weight: bold;
+	justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+    
+	
 }
-.table-responsive{
-    border:none;
+footer p:nth-child(1){
+	font-weight: bold;
+	color: #070303;
+	line-height: 10px;
+	align-items: center;
 }
-.popover {
-     color:#000
-  }
-a.td-price{
-    color:#fff;
-    border-bottom:1px dotted #ccc
+th{
+    background-color: rgb(91, 196, 152);
 }
 
-.green{color:#47e900}
-.red{color:#f00808}
-.paleyellow{color:#f8d97c}
-.purple{color:#b461ff}
-.turquoise{color:#52edff}
+footer .social a{
+    border:1px;
+    width: 50px;
+    height: 50px;
+    padding-top: 15px;
+    margin-right: 15px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.3em;
+    border-radius: 5px;
+    background-color: rgb(156, 147, 158);
+    transform: translate(700px,-15px);
+}
+a:hover{
+	transform: scale(1.1);
+}
+
+#footer-text{
+    text-align: center;
+    transform: translateY(60px);
+}
