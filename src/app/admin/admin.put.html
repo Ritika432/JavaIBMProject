@@ -1,71 +1,83 @@
-<html>
-    <head>
-       
-        <!-- JQuery API -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <!-- Icons -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <!-- Bootstrap css framework -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <!-- Bootstrap JavaScript -->
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-       
-       
-    </head>
-    <body>
-
-
-
-<div class="container contact-form">
-            <div class="contact-image">
-                <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/>
-            </div>
-        
-        <h3>Update Vehicle</h3>
-<div [hidden]="submitted" style="width: 400px;">
-  <form (ngSubmit)="onSubmit()">
-
-    <div class="form-group">
-        <label for="vehicleid">Vehicle Id</label>
-        <input type="text" class="form-control" id="firstName" required [(ngModel)]="vehicle.vehicleid" >
-      </div>
-
-
-
-
-    <div class="form-group">
-      <label for="name">Name</label>
-      <input type="text" class="form-control" id="firstName" required [(ngModel)]="vehicle.firstName" >
-    </div>
-
-    <div class="form-group">
-      <label for="type">Type</label>
-      <input type="text" class="form-control" id="type" required [(ngModel)]="vehicle.lastName" >
-    </div>
-
-    <div class="form-group">
-      <label for="name">Registration Number</label>
-      <input type="text" class="form-control" id="reg_no" required [(ngModel)]="vehicle.emailId" >
-    </div>
-
-
-    <div class="form-group">
-        <label for="seat_cap">Seating Capacity</label>
-        <input type="text" class="form-control" id="seat_cap" required [(ngModel)]="vehicle.seat_cap" >
-      </div>
-
-
-      <div class="form-group">
-        <label for="fare">Fare per km </label>
-        <input type="text" class="form-control" id="reg_no" required [(ngModel)]="vehicle.fare" >
-      </div>
-
-
-    <button type="submit" class="btn btn-success">Submit</button>
-  </form>
-</div>    
-           
+<div id="navigation">
+  <nav class="navbar navbar-default navbar-fixed-top">
+        <span id="logo-IBM"><p><strong style="border-style: solid; border-color: rgb(3, 8, 6); margin: 10px;padding: 10px;border-radius: 10px;">Automation Travel Agency</strong></p></span>
+        <ul class="nav  navbar-nav navbar-right nav-pills">
+            <li><a href="dashboard.html" style="color: black;"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+            <li><a href="#" style="color: black;"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+        </ul>
+    </nav>
 </div>
- </body>
-</html>
+<div id="bg-img" class="view">
+    <div class="ful-bg-img"></div>
+</div>
+<img id="top-image" src="images/car-funny1.svg"> 
+
+<div class="container">
+    
+     <div id="welcome">
+        <img src="../../assets/images/vehicle-list.svg" id="vehicle-list" alt="">  <h1 id="page-title">Vehicle List</h1>
+      </div>
+    <div id="funny-car">
+        <img id="top-image2" src="../../assets/images/undraw_toy_car_7umw.svg" style="height:100px">
+    </div>
+
+
+    <form>
+      <h1>Update Vehicle</h1>
+      <br/>
+
+      <div class="form-group form">
+        <label for="name" ><h5>Vehicle id :</h5></label>
+        <input  type="text" class="form-control col-md-4" #vehicleid  required>
+  </div>
+    
+          
+          <div class="form-group form">
+               <label for="name" ><h5>Name :</h5></label>
+               <input  type="text" class="form-control col-md-4" #name  required>
+         </div>
+     
+          <div class="form-group form">
+             <label for="type" ><h5>Type:</h5></label>
+             <input type="text" class="form-control col-md-4" #type  name="lastname" required>
+         </div> 
+          <div class="form-group form">
+              <label for="regno" ><h5>Registration no:</h5></label>
+              <input type="text" class="form-control col-md-4" #registrationNumber required>
+          </div>
+          <div class="form-group form">
+              <label for="capacity" ><h5>Seating capacity:</h5></label>
+              <input type="text" class="form-control col-md-4" #seatingCapacity required>
+          </div> 
+          <div class="form-group form">
+            <label for="fare" ><h5>Fare per km :</h5></label>
+            <input type="text" class="form-control col-md-4" #farePerKm required>
+        </div> 
+
+          <br/><br/>
+              
+                 
+                  <button  class="btn1" (click)="updateVehicle(vehicleid,name,type,registrationNumber,seatingCapacity,farePerKm)" >Update</button>
+              
+      </form>
+
+
+      <div id="footer-container">
+          <footer>
+                  <div class="social">
+                      <a href="#" class="fa fa-youtube" id="social-icon"style="color: rgb(255, 255, 255); "></a>
+                      <a href="https://github.com/saismaran98/eclipse-workspace" id="social-icon" target="_blank" class="fa fa-github" style="color: white;"></a>
+                      <a href="#" class="fa fa-linkedin" style="color: white;" id="social-icon"></a>
+                      <a href="#" class="fa fa-google-plus" aria-hidden="true" style="color: white;" id="social-icon"></a>
+                      <a href="#" class="fa fa-twitter" aria-hidden="true" style="color: white;" id="social-icon"></a>
+                  </div>
+                 
+          </footer>
+          </div>
+
+
+
+          
+          
+          
+          

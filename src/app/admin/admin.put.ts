@@ -14,7 +14,7 @@ import { Vehicle } from './admin.model';
 export class AdminPut implements OnInit {
 
     id: number;
-    vehicle: Vehicle ;
+    public Vehicle:Object;
 
     constructor(public adminService: AdminService) 
   
@@ -26,16 +26,31 @@ export class AdminPut implements OnInit {
     
   }
 
-  updateVehicle() {
-    this.adminService.updateVehicleDetails(this.id, this.vehicle)
-      .subscribe(data => console.log(data), error => console.log(error));
-    this.vehicle = new Vehicle();
- 
-    alert("Vehicle Data Updated Successfully");
+updateVehicle(vehicleid:any,name:any,type:any,registrationNumber:any,seatingCapacity:any,farePerKm:any) {
+
+
+  this.Vehicle = {
+
+    name:name.value,
+    type:type.value,
+    registrationNumber:registrationNumber.value,
+    scap:seatingCapacity.value,
+    fare:farePerKm.value
+  
   }
 
-  onSubmit() {
-    this.updateVehicle();    
+  id:vehicleid.value;
+
+
+
+    this.adminService.updateVehicleDetails(this.id, this.Vehicle).subscribe(
+      (response)=>{console.log("Vehicle updated"+response.toString())}
+      );
+    
+  
+ 
+   
   }
+
  
 }
