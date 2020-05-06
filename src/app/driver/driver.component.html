@@ -1,1 +1,39 @@
 <p>driver works!</p>
+
+<form #userForm="ngForm" (ngSubmit)="onSubmit(name,street,location,city,state,pincode,mobile,license)">
+<div class="form-group">
+<label>Name</label>
+<input type="name" class="form-control" name="name" #name [(ngModel)]="name" required>
+</div>
+<div class="form-group">
+<label>Street</label>
+<input type="street" class="form-control" name="street" #street [(ngModel)]="model.street" required>
+</div>
+<div class="form-group">
+<label>Location</label>
+<input type="location" class="form-control" name="location" #location [(ngModel)]="model.location" required>
+</div>
+<div class="form-group">
+<label>City</label>
+<input type="city" class="form-control" name="city" #city [(ngModel)]="model.city" required>
+</div>
+<div class="form-group">
+<label>State</label>
+<input type="state" class="form-control" name="state" #state [(ngModel)]="model.state" required>
+</div>
+<div class="form-group">
+<label>PinCode</label>
+<input type="pincode" class="form-control" name="pincode" #pincode [(ngModel)]="model.pincode" required>
+</div>
+<div class="form-group">
+<label>Mobilenumber</label>
+<input type="mob" class="form-control" name="mobileNumber" #mobile [(ngModel)]="model.mobileNumber" required>
+</div>
+<div class="form-group">
+<label>LicenseNumber</label>
+<input type="email" class="form-control" name="licenseNumber" #license [(ngModel)]="model.LicenseNumber" required>
+</div>
+<div class="form-group">
+<button class="btn btn-danger btn-block" >Submit</button>
+</div>
+</form>
