@@ -37,9 +37,10 @@ export class AdminDelete  {
   deleteVehicle(vehicleid:number) {
 
 
-    this.adminService.deleteVehicleDetails(this.vehicleid)
-    .subscribe(data => { alert ("Vehicle deleted successfully");
-  });
+    this.adminService.deleteVehicleDetails(this.vehicleid).
+    subscribe(
+      (response)=>{console.log("Vehicle deleted")}
+      );
 
  
   }

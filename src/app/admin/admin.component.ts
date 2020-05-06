@@ -25,7 +25,7 @@ export class AdminComponent implements OnInit {
   }
 
  
-  getData() {
+  getData(vehicleid:number) {
     
     this.vehiclelist=this.adminService.getVehicle(this.vehicleid);
 

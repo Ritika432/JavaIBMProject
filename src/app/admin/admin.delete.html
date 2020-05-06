@@ -15,7 +15,7 @@
   <div class="container">
       
        <div id="welcome">
-          <img src="../../assets/images/vehicle-list.svg" id="vehicle-list" alt="">  <h1 id="page-title">Vehicle List</h1>
+          <img src="../../assets/images/vehicle-list.svg" id="vehicle-list" alt="">  <h1 id="page-title">Vehicle </h1>
         </div>
       <div id="funny-car">
           <img id="top-image2" src="../../assets/images/undraw_toy_car_7umw.svg" style="height:100px">
@@ -25,11 +25,11 @@
         
     <div class="form-group form">
         <label for="getdetails" ><h5>Vehicle Id:</h5></label>
-        <input type="text" class="form-control col-md-4" #deletedetails required>
+        <input type="text" class="form-control col-md-4" #vehicleid required>
     </div> 
 
-    <button  class="btn2" (click)="getData(deletedetails)" >Get Details</button>
-    <button  class="btn2" (click)="deleteVehicle(deletedetails)" >Delete Details</button>
+    <button  class="btn2" (click)="getData(vehicleid)" >Get Details</button>
+    <button  class="btn2" (click)="deleteVehicle(vehicleid)" >Delete Details</button>
                 
         <div class="col-xs-12">
             <div class="table-responsive">
