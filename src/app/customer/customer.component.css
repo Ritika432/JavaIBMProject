@@ -102,9 +102,13 @@ footer .social a{
   padding:60px;
   width: 100%;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   height: 135.2vh;
 =======
   height: 122.2vh;
+>>>>>>> Stashed changes
+=======
+  height: 135.2vh;
 >>>>>>> Stashed changes
 
 }
@@ -139,6 +143,7 @@ form{
 #login-btn{
   padding: 8px 28px;
   margin: 4px;
+<<<<<<< Updated upstream
 =======
 }
 #sign-up{
@@ -146,5 +151,7 @@ form{
   overflow: hidden;
   margin-top: -200px;
   transform: translate(100px,400px);
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 }

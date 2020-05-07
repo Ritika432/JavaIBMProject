@@ -20,7 +20,6 @@ import {RouteComponent} from './route/route.component';
 import {ChangePasswordComponent} from './changePassword/changepassword.component';
 import {RouterModule, Router, Routes} from '@angular/router';
 import {LogoutComponent} from './logout/logout.component';
-import {LoginOptionComponent} from './login/login.options.component';
 import {DashBoardComponent} from './dashboard/dashboard.component'
 import { AdminPost } from './vehicle/admin.post';
 import { AdminPut} from './vehicle/admin.put';
@@ -28,6 +27,7 @@ import { AdminDelete } from './vehicle/admin.delete';
 import { AdminComponent } from './vehicle/admin.component';
 import {HomepageComponent} from './homepage/homepage.component';
 
+import {RegistrationOptionComponent} from './login/registration.options'
 import { LoginService } from './services/login.service';
 
 @NgModule({
@@ -49,7 +49,8 @@ import { LoginService } from './services/login.service';
     
     HomepageComponent,
     DashBoardComponent,
-    LoginOptionComponent
+    DashBoardComponent,
+    RegistrationOptionComponent
   ],
   imports: [
     BrowserModule,
@@ -65,7 +66,8 @@ import { LoginService } from './services/login.service';
         path: "", 
         component: AppComponent,
         children: [
-          { path: "", component: LoginOptionComponent },
+          { path: "", component: RegistrationOptionComponent },
+          { path: "", component: RegistrationOptionComponent },
           { path: "registerAdmin", component: AdministratorComponent },
           {path : "registerCustomer",component: CustomerComponent},
           {path:"login",component:LoginComponent}
