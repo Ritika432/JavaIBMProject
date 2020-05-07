@@ -101,7 +101,11 @@ footer .social a{
   margin-top:-40px;
   padding:60px;
   width: 100%;
+<<<<<<< Updated upstream
   height: 135.2vh;
+=======
+  height: 122.2vh;
+>>>>>>> Stashed changes
 
 }
 h1{
@@ -124,6 +128,7 @@ h2{
 form{
   width: 20%;
   height: 100px;
+<<<<<<< Updated upstream
 }
 #sign-up{
   height: 200px;
@@ -134,4 +139,12 @@ form{
 #login-btn{
   padding: 8px 28px;
   margin: 4px;
+=======
+}
+#sign-up{
+  height: 200px;
+  overflow: hidden;
+  margin-top: -200px;
+  transform: translate(100px,400px);
+>>>>>>> Stashed changes
 }
