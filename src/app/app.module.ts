@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import {AppRoutingModule,routingComponents} from './app-routing.module'
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule , ReactiveFormsModule } from '@angular/forms';
@@ -18,14 +18,17 @@ import {AdministratorComponent} from './customer/administrator.component';
 import {RouteComponent} from './route/route.component';
  import { DriverComponent } from './driver/driver.component';
 import {ChangePasswordComponent} from './changePassword/changepassword.component';
-import {RouterModule, Router} from '@angular/router';
+import {RouterModule, Router, Routes} from '@angular/router';
 import {LogoutComponent} from './logout/logout.component';
+import {LoginOptionComponent} from './login/login.options.component';
 import {DashBoardComponent} from './dashboard/dashboard.component'
 import { AdminPost } from './vehicle/admin.post';
 import { AdminPut} from './vehicle/admin.put';
 import { AdminDelete } from './vehicle/admin.delete';
 import { AdminComponent } from './vehicle/admin.component';
 import {HomepageComponent} from './homepage/homepage.component';
+
+import { LoginService } from './services/login.service';
 
 @NgModule({
   declarations: [
@@ -44,7 +47,9 @@ import {HomepageComponent} from './homepage/homepage.component';
     DashBoardComponent,AdminPost,
     AdminPut,AdminDelete,DriverComponent,
     
-    HomepageComponent
+    HomepageComponent,
+    DashBoardComponent,
+    LoginOptionComponent
   ],
   imports: [
     BrowserModule,
@@ -54,12 +59,61 @@ import {HomepageComponent} from './homepage/homepage.component';
    
     HttpClientModule,
     BrowserAnimationsModule,
-    RouterModule
+    RouterModule,
+    RouterModule.forRoot([
+      {
+        path: "", 
+        component: AppComponent,
+        children: [
+          { path: "", component: LoginOptionComponent },
+          { path: "registerAdmin", component: AdministratorComponent },
+          {path : "registerCustomer",component: CustomerComponent},
+          {path:"login",component:LoginComponent}
+        ]
+    },
 
-  ],
-  providers: [
-    HttpClientModule,
-  ],
-  bootstrap: [AppComponent]
+  ])
+],
+providers: [LoginService],
+bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+// {
+//   path:"",
+//   children:[
+//     {path : "registerCustomer",component: CustomerComponent},
+//     {path:"login",component:LoginComponent}
+//   ]
+// }
+
+
+//     AppRoutingModule
+
+//   ],
+//   providers: [
+//     HttpClientModule,
+//   ],
+//   bootstrap: [AppComponent],
+  
+// })
+// export class AppModule { 
+//   constructor(){
+//     const appRoutes: Routes = [
+//       {
+//         path: '',
+//         component: AppComponent,
+//         children: [
+//           {path:'registerAdmin',component: AdministratorComponent},
+//           {path:'registerCustomer',component:CustomerComponent} 
+//           // { path: 'events', component: EventsListComponent },
+//           // { path: 'events/:id', component: EventDetailsComponent },
+//           // { path: 'home', component: HomeComponent },
+//           // { path: 'view', component: ViewPostComponent },
+//           // { path: '', component: PlaceholderComponent }
+//         ]
+//       },
+//       { path: 'register-main', component: RegistrationOptionComponent },   ];
+//   }
+// }

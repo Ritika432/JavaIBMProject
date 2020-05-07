@@ -75,6 +75,7 @@
 </div>
 </div>
 <button id="userInfo" class="btn btn-success" (click)="onSumbit(dateOfJourney,cardNumber,validFrom,validTill,balance)">Sumbit</button>
+<div id="big-table-container">
 <div id="tableContainer">
  <div id="route-table">   
 <div class="row">
@@ -126,7 +127,7 @@
                                 <td>route</td>
                                 <td>route</td>                                  
                                 <td>route</td>
-                        </tr>
+                    </tr>
                     </tbody>
                 </table>
                 <input type="text" class="form-control"placeholder=" enterRouteId" #routeId>
@@ -137,7 +138,6 @@
     </div>
     <button id="booking" class="btn btn-success" (click)="onBook(vehicleId,routeId)">Book</button>
 </div>
-    
 
 
 

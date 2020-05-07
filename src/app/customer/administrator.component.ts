@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {CustomerService} from '../Services/customer.service';
 import {Customer} from './customer.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-administrator',
@@ -12,7 +13,7 @@ export class AdministratorComponent implements OnInit {
 
   public newAdmin:Object;
 
-  constructor(private customerService:CustomerService) 
+  constructor(private customerService:CustomerService,public router:Router) 
   { 
       
   }
@@ -38,5 +39,7 @@ export class AdministratorComponent implements OnInit {
       (response)=>{console.log("Administrator added"+response.toString())}
       );
   }
-
+  goToLogin(){
+    this.router.navigate(['login'])
+  }
 }

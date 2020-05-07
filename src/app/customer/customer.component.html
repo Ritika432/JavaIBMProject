@@ -1,7 +1,7 @@
 <nav class="navbar navbar-defaul">
     <span id="logo-IBM"><p><strong style="border-style: solid; border-color:white; color: white;margin: 10px;padding: 10px;border-radius: 10px;">Automation Travel Agency</strong></p></span>
     <ul class="nav  navbar-nav navbar-right nav-pills">
-        <li><a href="dashboard.html" style="color: white;"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+        <li><a href="/" style="color: white;"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
         <li><a href="#" id="profile"style="color: white;"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
     </ul>
 </nav>
@@ -76,7 +76,11 @@
                 <button id="register-btn" class="btn btn-info"  >Register</button>
                 <!-- (click)="setCustomer(firstname,lastname,dateOfBirth,male,female,street,location,city,state,pincode,mobilenumber,emailId,password)" -->
             </div>
-            
+            <div id="login-float">
+                <br>
+                 <h6>Already Registered</h6>
+              <button  id="login-btn" (click)="goToLogin()" class="btn btn-success" > Login </button>     
+              </div>
         </div>
     </form>
   

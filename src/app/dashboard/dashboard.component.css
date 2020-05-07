@@ -133,6 +133,10 @@ footer .social a{
 #tableContainer{
     height: 70vh;
 }
+#big-table-container{
+    display: grid;
+    grid-column: auto;
+}
 #booking{
     border-radius: 30px;
 	margin: 25px;

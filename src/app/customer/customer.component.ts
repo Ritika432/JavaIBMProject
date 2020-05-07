@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {CustomerService} from '../Services/customer.service';
 import {Customer} from './customer.model';
+import {Router, RouterEvent, RouterLink} from '@angular/router'
 
 @Component({
   selector: 'app-customer',
@@ -12,7 +13,7 @@ export class CustomerComponent implements OnInit {
 
   public newCustomer:Object;
 
-  constructor(private customerService:CustomerService) 
+  constructor(private customerService:CustomerService,public router:Router) 
   { 
       
   }
@@ -49,6 +50,9 @@ export class CustomerComponent implements OnInit {
     this.customerService.addCustomer(this.newCustomer).subscribe(
       (response)=>{console.log("Customer added"+response.toString())}
       );
+  }
+  goToLogin(){
+    this.router.navigate(['login'])
   }
 
 }
