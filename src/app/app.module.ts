@@ -16,7 +16,7 @@ import { RouteListComponent } from './route-list/route-list.component';
 import {CustomerComponent} from './customer/customer.component';
 import {AdministratorComponent} from './customer/administrator.component';
 import {RouteComponent} from './route/route.component';
-import { DriverComponent } from './driver/driver.component';
+//  import { DriverComponent } from './driver/driver.component';
 import {ChangePasswordComponent} from './changePassword/changepassword.component';
 import {RouterModule, Router} from '@angular/router';
 import {LogoutComponent} from './logout/logout.component';
@@ -31,7 +31,7 @@ import { AdminComponent } from './vehicle/admin.component';
   declarations: [
     AppComponent,
     AdminComponent,
-   ,CreditCardComponent,
+   CreditCardComponent,
     BookingComponent,
    LoginComponent,
     VehicleListComponent,
@@ -40,7 +40,6 @@ import { AdminComponent } from './vehicle/admin.component';
     RouteComponent,
     AdministratorComponent,
     ChangePasswordComponent,
-    DriverComponent,
     LogoutComponent,
     DashBoardComponent,AdminPost,
     AdminPut,AdminDelete

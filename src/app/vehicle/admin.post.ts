@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminService } from '../services/admin.service'
 import { Observable } from 'rxjs';
-import { VehicleComponent } from '../vehicle/vehicle.component';
 import { Vehicle } from './admin.model';
 
 
