@@ -28,7 +28,6 @@ import { AdminComponent } from './vehicle/admin.component';
 import {HomepageComponent} from './homepage/homepage.component';
 
 import {RegistrationOptionComponent} from './login/registration.options'
-import { LoginService } from './services/login.service';
 
 @NgModule({
   declarations: [
@@ -76,7 +75,7 @@ import { LoginService } from './services/login.service';
 
   ])
 ],
-providers: [LoginService],
+providers: [],
 bootstrap: [AppComponent]
 })
 export class AppModule { }

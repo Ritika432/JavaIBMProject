@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../services/login.service'
 import { Observable } from 'rxjs';
 import {Result}from './result.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-options',
@@ -18,13 +19,18 @@ export class RegistrationOptionComponent implements OnInit {
 
 
   
-  constructor(public  loginService:  LoginService) 
+  constructor(public  loginService:  LoginService,public router :Router) 
   
   {
     
   }
   ngOnInit(): void 
   {
+  }
+  goToAdminRegistration(){
+    this.router.navigate[(
+      'login'
+    )]
   }
 
 }
