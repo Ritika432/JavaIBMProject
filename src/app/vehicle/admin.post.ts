@@ -31,11 +31,11 @@ public Vehicle:Object;
 
   this.Vehicle = {
 
-  name:name.value,
-  type:type.value,
-  registrationNumber:registrationNumber.value,
-  scap:seatingCapacity.value,
-  fare:farePerKm.value
+  "name":name.value,
+  "type":type.value,
+  "registrationNumber":registrationNumber.value,
+  "seatingCapacity":seatingCapacity.value,
+  "farePerKm":farePerKm.value
 
 }
 
