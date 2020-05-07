@@ -15,6 +15,8 @@ export class AdminDelete  {
 
   vehiclelist : Observable <Object>;
   vehicleid : number;
+
+  public vehicles = [];
   
   vehicle : Vehicle = new Vehicle();
 
@@ -26,20 +28,35 @@ export class AdminDelete  {
   }
 
    
-  getData(vehicleid:number) {
+  getData() {
     
-    this.vehiclelist=this.adminService.getVehicle(this.vehicleid);
+    this.adminService.getVehicle(this.vehicleid).subscribe((response) => {
+      console.log("response array", response)
+      let key;
+      for(key in response){
+        this.vehicles.push(response[key]);
+      }
 
-  }
+      console.log("vehicle",this.vehicles)
+
+    }
 
 
 
-  deleteVehicle(vehicleid:number) {
+    );
+    
+  
+}
 
 
-    this.adminService.deleteVehicleDetails(this.vehicleid)
-    .subscribe(data => { alert ("Vehicle deleted successfully");
-  });
+
+  deleteVehicle() {
+
+
+    this.adminService.deleteVehicleDetails(this.vehicleid).
+    subscribe(
+      (response)=>{console.log("Vehicle deleted",response)}
+      );
 
  
   }

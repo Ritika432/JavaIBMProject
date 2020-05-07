@@ -1,17 +1,19 @@
-
 body
 {
     font-family:sans-serif;
     background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("https://besthqwallpapers.com/Uploads/5-10-2016/8932/travel-summer-travel-to-cars-beach.jpg");
+       
 }
-
+.logo{
+    position: absolute;
+    
+}
 button{
     position: absolute;
     top:50%;
     left:50%;
     transform:translate(-50%, -50%);
 }
-
 button{
     background: none;
     color:#ccc;
@@ -23,7 +25,6 @@ button{
     transition: .6s;
     overflow: hidden;
 }
-
 button:focus{
     outline:none;
 }

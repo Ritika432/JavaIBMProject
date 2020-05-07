@@ -15,22 +15,18 @@
   <div class="container">
       
        <div id="welcome">
-          <img src="../../assets/images/vehicle-list.svg" id="vehicle-list" alt="">  <h1 id="page-title">Vehicle List</h1>
+          <img src="../../assets/images/vehicle-list.svg" id="vehicle-list" alt="">  <h1 id="page-title">Vehicle </h1>
         </div>
       <div id="funny-car">
           <img id="top-image2" src="../../assets/images/undraw_toy_car_7umw.svg" style="height:100px">
       </div>
-        
-      
-        
-    <div class="form-group form">
-        <label for="getdetails" ><h5>Vehicle Id:</h5></label>
-        <input type="text" class="form-control col-md-4" #deletedetails required>
-    </div> 
+     
+      <label >Vehicle Id</label>
+    <input (input)="vehicleid=$event.target.value" type="text" class="form-control">
+    <button class="btn btn-success" (click)="getData()">Get Details</button> 
 
-    <button  class="btn2" (click)="getData(deletedetails)" >Get Details</button>
-    <button  class="btn2" (click)="deleteVehicle(deletedetails)" >Delete Details</button>
-                
+   
+                     
         <div class="col-xs-12">
             <div class="table-responsive">
                 <table class="table table-bordered table-hover table-responsive">
@@ -45,14 +41,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let list of vehiclelist">
-                                    <td>{{list.vehicleId}}</td>
-                                    <td>{{list.name}}</td>
-                                    <td>{{list.type}}</td>
-                                    <td>{{list.registrationNumber}}</td>
-                                    <td>{{list.seatingCapacity}}</td>
-                                    <td>{{list.farePerKm}}</td>                                    
-                        </tr>
+                        <tr >
+                            <td>{{vehicles[0]}}</td>
+                            <td>{{vehicles[1]}}</td>
+                            <td>{{vehicles[2]}}</td>
+                            <td>{{vehicles[3]}}</td>
+                            <td>{{vehicles[4]}}</td>
+                            <td>{{vehicles[5]}}</td>                                    
+                  </tr>
                     </tbody>
                 </table>
             </div>
@@ -68,7 +64,7 @@
             <a href="#" class="fa fa-google-plus" aria-hidden="true" style="color: white;" id="social-icon"></a>
             <a href="#" class="fa fa-twitter" aria-hidden="true" style="color: white;" id="social-icon"></a>
         </div>
-       
 </footer>
 </div>
+
     

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminService } from '../services/admin.service'
 import { Observable } from 'rxjs';
-import { VehicleComponent } from '../vehicle/vehicle.component';
 import { Vehicle } from './admin.model';
 
 
@@ -32,11 +31,11 @@ public Vehicle:Object;
 
   this.Vehicle = {
 
-  name:name.value,
-  type:type.value,
-  registrationNumber:registrationNumber.value,
-  scap:seatingCapacity.value,
-  fare:farePerKm.value
+  "name":name.value,
+  "type":type.value,
+  "registrationNumber":registrationNumber.value,
+  "seatingCapacity":seatingCapacity.value,
+  "farePerKm":farePerKm.value
 
 }
 
