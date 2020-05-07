@@ -12,6 +12,7 @@ export class AdminComponent implements OnInit {
 
   vehiclelist : Observable <Object>;
   vehicleid : number;
+  public vehicles = [];
   
   constructor(public adminService: AdminService) 
   
@@ -25,10 +26,26 @@ export class AdminComponent implements OnInit {
   }
 
  
-  getData(vehicleid:number) {
+
+ 
+  getData() {
+ 
+    this.adminService.getVehicle(this.vehicleid).subscribe((response) => {
+      console.log("response array", response)
+      let key;
+      for(key in response){
+        this.vehicles.push(response[key]);
+      }
+
+      console.log("vehicle",this.vehicles)
+
+    }
+
+
+
+    );
     
-    this.vehiclelist=this.adminService.getVehicle(this.vehicleid);
+  
+}}
 
-  }
 
-}

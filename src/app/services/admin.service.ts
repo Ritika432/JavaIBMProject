@@ -8,7 +8,7 @@ export class AdminService{
   public httpHeaders:HttpHeaders;
   public sessionId:   string="";
 
-  public baseurl = 'http://localhost:8080/app/vehicle';
+ 
 
   constructor(private _httpClient: HttpClient){
     this.httpHeaders=new HttpHeaders()
@@ -19,21 +19,21 @@ export class AdminService{
 
 getVehicle(vehicleid:number) : Observable<Object> {
 
-return this._httpClient.get( `${this.baseurl}/${vehicleid}` , {headers: this.httpHeaders});
+return this._httpClient.get( 'http://localhost:8080/app/vehicle/'+vehicleid , {headers: this.httpHeaders});
 }
 
 
 addVehicleDetails(vehicleObj:Object): Observable<Object> {
-    return this._httpClient.post(`${this.baseurl}`,JSON.stringify(vehicleObj),{headers:this.httpHeaders.set('authtoken',this.sessionId)});
+    return this._httpClient.post('http://localhost:8080/app/vehicle',JSON.stringify(vehicleObj),{headers:this.httpHeaders.set('authtoken',this.sessionId)});
   }
 
   updateVehicleDetails(vehicleid:number , vehicleObj:Object): Observable<Object> {
-    return this._httpClient.put(`${this.baseurl}/${vehicleid}`,JSON.stringify(vehicleObj),{headers:this.httpHeaders.set('authtoken',this.sessionId)});
+    return this._httpClient.put('http://localhost:8080/app/vehicle/'+vehicleid,JSON.stringify(vehicleObj),{headers:this.httpHeaders.set('authtoken',this.sessionId)});
   }
 
 
 deleteVehicleDetails(vehicleid:number): Observable<Object> {
-    return this._httpClient.delete( `${this.baseurl}/${vehicleid}` ,{headers:this.httpHeaders.set('authtoken',this.sessionId)});
+    return this._httpClient.delete( 'http://localhost:8080/app/vehicle/'+vehicleid ,{headers:this.httpHeaders.set('authtoken',this.sessionId)});
   } 
 
   addDriverDetails(driverObj,sessionId:string): Observable<Object> {
@@ -47,6 +47,5 @@ deleteVehicleDetails(vehicleid:number): Observable<Object> {
   updateDriverDetails(driverObj,sessionId): Observable<Object> {
     return this._httpClient.put('http://localhost:8080/app/driver/',JSON.stringify(driverObj),{headers:this.httpHeaders.set('authtoken',sessionId)});
   }
-
 
 }
