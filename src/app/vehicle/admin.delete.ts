@@ -2,12 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { AdminService } from '../services/admin.service'
 import { Observable } from 'rxjs';
 import { Vehicle } from './admin.model';
+import { LoginService } from '../services/login.service'
 
 
 @Component({
   selector: 'app-admin-delete',
   templateUrl: './admin.delete.html',
-  providers:  [ AdminService ],
+  providers:  [ AdminService , LoginService ],
   styleUrls: ['./admin.delete.css']
 })
 export class AdminDelete  {
@@ -17,14 +18,13 @@ export class AdminDelete  {
   vehicleid : number;
 
   public vehicles = [];
-  
-  vehicle : Vehicle = new Vehicle();
+
 
   
-  constructor(public adminService: AdminService) 
+  constructor(public adminService: AdminService , public  loginService:  LoginService ) 
   
   {
-   
+    
   }
 
    
@@ -53,7 +53,7 @@ export class AdminDelete  {
   deleteVehicle() {
 
 
-    this.adminService.deleteVehicleDetails(this.vehicleid).
+    this.adminService.deleteVehicleDetails(this.vehicleid,this.loginService.sessionId).
     subscribe(
       (response)=>{console.log("Vehicle deleted",response)}
       );

@@ -6,7 +6,7 @@ import {Observable} from 'rxjs';
 export class AdminService{
 
   public httpHeaders:HttpHeaders;
-  public sessionId:   string="";
+  public sessionId: string;
 
  
 
@@ -23,16 +23,16 @@ return this._httpClient.get( 'http://localhost:8080/app/vehicle/'+vehicleid , {h
 }
 
 
-addVehicleDetails(vehicleObj:Object): Observable<Object> {
+addVehicleDetails(vehicleObj:Object , sessionId:string): Observable<Object> {
     return this._httpClient.post('http://localhost:8080/app/vehicle',JSON.stringify(vehicleObj),{headers:this.httpHeaders.set('authtoken',this.sessionId)});
   }
 
-  updateVehicleDetails(vehicleid:number , vehicleObj:Object): Observable<Object> {
+  updateVehicleDetails(vehicleid:number , vehicleObj:Object , sessionId:string): Observable<Object> {
     return this._httpClient.put('http://localhost:8080/app/vehicle/'+vehicleid,JSON.stringify(vehicleObj),{headers:this.httpHeaders.set('authtoken',this.sessionId)});
   }
 
 
-deleteVehicleDetails(vehicleid:number): Observable<Object> {
+deleteVehicleDetails(vehicleid:number , sessionId:string): Observable<Object> {
     return this._httpClient.delete( 'http://localhost:8080/app/vehicle/'+vehicleid ,{headers:this.httpHeaders.set('authtoken',this.sessionId)});
   } 
 
