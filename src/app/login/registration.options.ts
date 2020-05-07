@@ -1,12 +1,10 @@
 
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../services/login.service'
-import { Observable } from 'rxjs';
-import {Result}from './result.model';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-login-options',
+  selector: 'app-options',
   templateUrl: './registration.options.html',
   providers:  [ LoginService ],
   styleUrls: ['./registration.options.css']
@@ -28,9 +26,10 @@ export class RegistrationOptionComponent implements OnInit {
   {
   }
   goToAdminRegistration(){
-    this.router.navigate[(
-      'login'
-    )]
+    this.router.navigate(['registerAdmin'])
+  }
+  goToUserRegistration(){
+    this.router.navigate(['registerCustomer'])
   }
 
 }

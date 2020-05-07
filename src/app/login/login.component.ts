@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../services/login.service'
-import { Observable } from 'rxjs';
-import {Result}from './result.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -17,8 +16,7 @@ export class LoginComponent implements OnInit {
 
 
   
-  constructor(public  loginService:  LoginService) 
-  
+  constructor(public  loginService:  LoginService,public router:Router) 
   {
     
   }
@@ -34,12 +32,23 @@ export class LoginComponent implements OnInit {
       password:password.value
     }
     this.loginService.loginUser(this.login);
-    if(this.loginService.sessionId != null)
-     alert("User Logged In");
-    else
-    alert("Invalid Email-Id or Password");
+    if(this.loginService.sessionId != null){
+     sessionStorage.setItem("sessionId",this.sessionId);
+     this.router.navigate(['/dash'])
+    }
+    else{
+   console.log("failed")
+  }
+ }
+ goToDash(){
+  this.router.navigate(['dash'])
  }
 
-  
+  signUP(){
+    this.router.navigate(['registrationOption'])
+  }
+  goToChangePassword(){
+    this.router.navigate(['checkPass'])
+  }
  
 }

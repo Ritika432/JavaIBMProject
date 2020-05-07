@@ -40,6 +40,6 @@ export class AdministratorComponent implements OnInit {
       );
   }
   goToLogin(){
-    this.router.navigate(['login'])
+    this.router.navigate(['adminLogin'])
   }
 }

@@ -52,7 +52,7 @@ export class CustomerComponent implements OnInit {
       );
   }
   goToLogin(){
-    this.router.navigate(['login'])
+    this.router.navigate(['/login'])
   }
 
 }

@@ -72,12 +72,13 @@ input{
 #vehicle-table{
     width: 40%;
     margin-left: 40px;
-    transform: translateY(-85px);
+    transform: translateY(-125px);
 }
 #route-table{
     width: 40%;
     margin-left: 900px;
-    transform: translateY(95px);
+    transform: translateY(5px);
+
 }
 #userInfo{
     border-radius: 30px;

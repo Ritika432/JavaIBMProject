@@ -1,10 +1,11 @@
+
 <!--- start home section-->
 <div>
     <nav class="navbar navbar-defaul">
         <span id="logo-IBM"><p><strong style="border-color:white; color: white;;padding: 10px;border-radius: 10px;">Automation Travel Agency</strong></p></span>
         <ul class="nav  navbar-nav navbar-right nav-pills">
-            <li><a href="#tableContainer" style="color: white;"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
-            <li><a href="#" id="profile"style="color: white;"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+            <li><a href=""  style="color: white;"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+            <li><a href="/"  id="profile"style="color: white;"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
         </ul>
     </nav>
     <div class="form-group" style="width: 40%;" id="date" style="border-style: none; width: 600px;">
@@ -74,7 +75,7 @@
    </div>
 </div>
 </div>
-<button id="userInfo" class="btn btn-success" (click)="onSumbit(dateOfJourney,cardNumber,validFrom,validTill,balance)">Sumbit</button>
+<button id="userInfo" class="btn btn-success" >Sumbit</button><!--(click)="onSumbit(dateOfJourney,cardNumber,validFrom,validTill,balance)"-->
 <div id="big-table-container">
 <div id="tableContainer">
  <div id="route-table">   
@@ -97,7 +98,7 @@
                             <td>vehicle</td>    
                             <td>safggs</td>                            
                     </tr>
-                    
+            
                 </tbody>
             </table>
             <input type="text" class="form-control"placeholder=" enterVehicleId" #vehicleId>
@@ -135,8 +136,9 @@
         </div>
     </div>
     </div>
+    <button id="booking" class="btn btn-success">Book</button><!-- (click)="onBook(vehicleId,routeId)"-->
     </div>
-    <button id="booking" class="btn btn-success" (click)="onBook(vehicleId,routeId)">Book</button>
+    
 </div>
 
 
