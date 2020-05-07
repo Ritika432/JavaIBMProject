@@ -3,8 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { RoutelistService } from '../services/route-list.services';
 
 @Component({
-  selector: 'approute',
-  templateUrl: './route.component.html',
+  selector: 'approutelist',
+  templateUrl: './routelist.component.html',
  providers:[RoutelistService]
   })
 
