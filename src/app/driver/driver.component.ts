@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { AdminService } from '../services/admin.service';
 import {DriverService} from '../services/driver.services'
 export class Driver {
 public driverId: String;
@@ -16,21 +15,19 @@ public licenseNumber: string;
 selector: 'register-driver',
 templateUrl: './driver.component.html',
 //styleUrls: ['./app.component.css']
-providers: [ AdminService,DriverService ]
+providers: [ DriverService ]
 })
 export class DriverComponent {
 public driver;
-model = new Driver();
-public getRegistrationservice;
-constructor(private getService: AdminService,driverService:DriverService)
+public sessionId:string="5017e";
+constructor(public driverService:DriverService)
 {
-this.getRegistrationservice=getService;
 
 }
  onSubmit(name:any,street:any,location:any,city:any,state:any,pincode:any,mobilenumber:any,licenseNumber:any)
 {
     console.log(licenseNumber)
-this.getRegistrationservice.Driver({
+this.driverService.addDriverDetails({
 "name":name.value,
 "street":street.value,
 "location":location.value,
@@ -39,7 +36,7 @@ this.getRegistrationservice.Driver({
 "pincode":pincode.value,
 "mobileNo":mobilenumber.value,
 "licenseNumber":licenseNumber.value
-}
+},this.sessionId
 ).subscribe((response)=> {
 this.driver=response;
 console.log("New Driver added : ",response);

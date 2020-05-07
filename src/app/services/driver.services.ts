@@ -12,9 +12,7 @@ export class DriverService{
     .set('allow-origin-access-control','*')
     .set('Content-type','application/json');
   }
-  getDriverDetails(): Observable<Object> {
-    return this._httpClient.get('http://localhost:8080/app/driver',{headers:this.httpHeaders});
-  }
+
   deleteDriverDetails(sessionId): Observable<Object> {
     return this._httpClient.delete('http://localhost:8080/app/driver/',{headers:this.httpHeaders.set('authtoken',sessionId)});
   }

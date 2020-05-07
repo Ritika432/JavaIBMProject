@@ -2,7 +2,7 @@
 
 <!-- <form #adForm="ngForm" (ngSubmit)="onSubmit(adForm.value)" class="alignMiddle col-md-4 offset-md-4" novalidate>
     <br> -->
-<form #userForm="ngForm" (ngSubmit)="onSubmit(name,street,location,city,state,pincode,mobile,license)" #adForm ngForm novalidate>
+<form  (ngSubmit)="onSubmit(name,street,location,city,state,pincode,mobile,license)" #adForm ="ngForm" ngForm novalidate>
 
 
 <div class="form-group">
