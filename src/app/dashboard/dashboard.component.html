@@ -9,7 +9,7 @@
     </nav>
     <div class="form-group" style="width: 40%;" id="date" style="border-style: none; width: 600px;">
         <label for="dateOfJourney" style="font-weight: bolder;">SELECT JOURNEY DATE: </label>
-        <input type="date" class="form-control" placeholder="Enter date" id="dateOfJourney" />
+        <input type="date" class="form-control" placeholder="Enter date" id="dateOfJourney"  #dateOfJourney/>
     </div>
         <div class="image" >
             <img src="../../assets/images/undraw_profile_data_credit_card.svg">
@@ -33,7 +33,7 @@
                                     <div class="form-group">
                                         <label>CARD NUMBER</label>
                                         <div class="input-group">
-                                            <input type="tel" class="form-control" placeholder="Valid Card Number" />
+                                            <input type="tel" class="form-control" placeholder="Valid Card Number" #cardNumber/>
                                             <span class="input-group-addon"><span class="fa fa-credit-card"></span></span>
                                         </div>
                                     </div>
@@ -42,13 +42,13 @@
                             <div class="row">
                                 <div class="col-xs-7 col-md-7">
                                     <div class="form-group">
-                                        <label><span class="hidden-xs">VALID FROM</span><span class="visible-xs-inline">EXP</span> DATE</label>
+                                        <label><span class="hidden-xs">VALID FROM</span><span class="visible-xs-inline" #validFrom>EXP</span> DATE</label>
                                         <input type="tel" class="form-control" placeholder="MM / YY" />
                                     </div>
                                 </div>
                                 <div class="col-xs-7 col-md-7">
                                     <div class="form-group">
-                                        <label><span class="hidden-xs">VALID TILL</span><span class="visible-xs-inline">EXP</span> DATE</label>
+                                        <label><span class="hidden-xs">VALID TILL</span><span class="visible-xs-inline" #validTill>EXP</span> DATE</label>
                                         <input type="tel" class="form-control" placeholder="MM / YY" />
                                     </div>
                                 </div>
@@ -63,7 +63,7 @@
                                 <div class="col-xs-12">
                                     <div class="form-group">
                                         <label>Enter Balance</label>
-                                        <input type="text" class="form-control" placeholder="Enter Correct balance , Else FINE to be paid !!" />
+                                        <input type="text" class="form-control" placeholder="Enter Correct balance , Else FINE to be paid !!" #balance/>
                                     </div>
                                 </div>
                             </div>
@@ -74,7 +74,7 @@
    </div>
 </div>
 </div>
-<button id="userInfo" class="btn btn-success">Sumbit</button>
+<button id="userInfo" class="btn btn-success" (click)="onSumbit(dateOfJourney,cardNumber,validFrom,validTill,balance)">Sumbit</button>
 <div id="tableContainer">
  <div id="route-table">   
 <div class="row">
@@ -99,7 +99,7 @@
                     
                 </tbody>
             </table>
-            <input type="text" class="form-control"placeholder=" enterVehicleId" id="vehicleId">
+            <input type="text" class="form-control"placeholder=" enterVehicleId" #vehicleId>
         </div>
     </div>
 </div>
@@ -114,11 +114,10 @@
                     <thead>
                         <tr >
                             <th>ID</th>
-                            <th>Name</th>
-                            <th>Type</th>
-                            <th>Registration Number</th>
-                            <th>Seating Capacity</th>
-                            <th>Fare Per Km</th>
+                            <th>Source</th>
+                            <th>Destination</th>
+                            <th>Distance</th>
+                            <th>Travel Duration</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -130,13 +129,13 @@
                         </tr>
                     </tbody>
                 </table>
-                <input type="text" class="form-control"placeholder=" enterRouteId" id="vehicleId">
+                <input type="text" class="form-control"placeholder=" enterRouteId" #routeId>
             </div>
         </div>
     </div>
     </div>
     </div>
-    <button id="booking" class="btn btn-success">Book</button>
+    <button id="booking" class="btn btn-success" (click)="onBook(vehicleId,routeId)">Book</button>
 </div>
     
 

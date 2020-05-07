@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { AdminService } from '../services/admin.service'
 import { Observable } from 'rxjs';
 import { Vehicle } from './admin.model';
-
+import { LoginService } from '../services/login.service'
 
 @Component({
   selector: 'app-admin-post',
   templateUrl: './admin.post.html',
-  providers:  [ AdminService ],
+  providers:  [ AdminService , LoginService],
   styleUrls: ['./admin.post.css']
 })
 export class AdminPost implements OnInit {
@@ -15,10 +15,10 @@ export class AdminPost implements OnInit {
 public Vehicle:Object;
 
   
-  constructor(public adminService: AdminService) 
+  constructor(public adminService: AdminService , public  loginService:  LoginService ) 
   
   {
-   
+    
   }
 
   ngOnInit(): void {
@@ -39,7 +39,7 @@ public Vehicle:Object;
 
 }
 
-this.adminService.addVehicleDetails(this.Vehicle).subscribe(
+this.adminService.addVehicleDetails(this.Vehicle,this.loginService.sessionId).subscribe(
   (response)=>{console.log("Vehicle added"+response.toString())}
   );
 

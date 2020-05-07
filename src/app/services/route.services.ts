@@ -15,7 +15,7 @@ export class RouteService{
   getRouteDetails(): Observable<Object> {
     return this._httpClient.get('http://localhost:8080/app/route',{headers:this.httpHeaders});
   }
-  deleteRouteDetails(sessionId): Observable<Object> {
+  deleteRouteDetails(id,sessionId): Observable<Object> {
     return this._httpClient.delete('http://localhost:8080/app/route/{routeId} ',{headers:this.httpHeaders.set('authToken',sessionId)});
   }
   addRouteDetails(routeObj,sessionId:string): Observable<Object> {
