@@ -6,10 +6,10 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule , ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { AdminComponent } from './admin/admin.component';
+
 import { CreditCardComponent } from './credit-card/credit-card.component';
 import { BookingComponent } from './booking/booking.component';
-import { VehicleComponent } from './vehicle/vehicle.component';
+
 import { LoginComponent } from './login/login.component';
 import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
 import { RouteListComponent } from './route-list/route-list.component';
@@ -21,16 +21,19 @@ import {ChangePasswordComponent} from './changePassword/changepassword.component
 import {RouterModule, Router} from '@angular/router';
 import {LogoutComponent} from './logout/logout.component';
 import {DashBoardComponent} from './dashboard/dashboard.component'
+import { AdminPost } from './vehicle/admin.post';
+import { AdminPut} from './vehicle/admin.put';
+import { AdminDelete } from './vehicle/admin.delete';
+import { AdminComponent } from './vehicle/admin.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminComponent,
-    VehicleComponent, CreditCardComponent,
+   ,CreditCardComponent,
     BookingComponent,
-    VehicleComponent,
-    LoginComponent,
+   LoginComponent,
     VehicleListComponent,
     RouteListComponent,
     CustomerComponent,
@@ -39,7 +42,8 @@ import {DashBoardComponent} from './dashboard/dashboard.component'
     ChangePasswordComponent,
     DriverComponent,
     LogoutComponent,
-    DashBoardComponent
+    DashBoardComponent,AdminPost,
+    AdminPut,AdminDelete
   ],
   imports: [
     BrowserModule,
