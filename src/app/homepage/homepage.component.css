@@ -1,12 +1,12 @@
 html,body{
-    height: 100vh;
+    height: 200vh;
     width: 100%;
 }
 body
 {
     font-family:sans-serif;
     background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("https://besthqwallpapers.com/Uploads/5-10-2016/8932/travel-summer-travel-to-cars-beach.jpg");
-       
+    background-repeat:no-repeat;
 }
 .logo{
     position: absolute;
@@ -40,7 +40,6 @@ button:before
     position: absolute;
     background: rgba(255,255,255,.5);
     width:60px;
-    height:100%;
     left:0;
     top:0;
     opacity:.5s;
@@ -55,7 +54,6 @@ button:after
     position: absolute;
     background: rgba(255,255,255,.2);
     width:30px;
-    height:100%;
     left:0;
     top:0;
     filter:blur(30px);

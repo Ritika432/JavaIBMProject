@@ -18,32 +18,38 @@ export class LoginComponent implements OnInit {
   
   constructor(public  loginService:  LoginService,public router:Router) 
   {
-    
+    var promise = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log("Async Work Complete");
+        resolve();
+      }, 1000);
+    });
   }
   ngOnInit(): void 
   {
   }
 
 
- checkLogin(emailId:any,password:any)
- {  
-    this.login={
-      emailId:emailId.value,
-      password:password.value
-    }
-    this.loginService.loginUser(this.login);
-    if(this.loginService.sessionId != null){
+  loginOk(emailId:any,password:any)
+  {  
+     this.login={
+       emailId:emailId.value,
+       password:password.value
+     }
+     
+     
+     this.loginService.loginUser(this.login);
+     if(this.loginService.sessionId != null){
+     console.log("sessionId: ",this.loginService.sessionId)
      sessionStorage.setItem("sessionId",this.sessionId);
+    
      this.router.navigate(['/dash'])
     }
-    else{
-   console.log("failed")
+     else{
+      
+     }  
   }
- }
- goToDash(){
-  this.router.navigate(['dash'])
- }
-
+ 
   signUP(){
     this.router.navigate(['registrationOption'])
   }

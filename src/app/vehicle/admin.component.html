@@ -22,8 +22,8 @@
       </div>
      
       <label >Vehicle Id</label>
-    <input (input)="vehicleid=$event.target.value" type="text" class="form-control">
-    <button class="btn btn-success" (click)="getData()">Get Details</button> 
+    <!-- <input (input)="vehicleid=$event.target.value" type="text" class="form-control">
+    <button class="btn btn-success" (click)="getData()">Get Details</button>  -->
 
    
                      
@@ -41,13 +41,13 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr >
-                            <td>{{vehicles[0]}}</td>
-                            <td>{{vehicles[1]}}</td>
-                            <td>{{vehicles[2]}}</td>
-                            <td>{{vehicles[3]}}</td>
-                            <td>{{vehicles[4]}}</td>
-                            <td>{{vehicles[5]}}</td>                                    
+                        <tr *ngFor="let ele of vehicles">
+                            <td>{{ele.vehicleId}}</td>
+                                    <td>{{ele.name}}</td>
+                                    <td>{{ele.type}}</td>
+                                    <td>{{ele.registrationNumber}}</td>
+                                    <td>{{ele.seatingCapacity}}</td>
+                                    <td>{{ele.farePerKm}}</td>                                    
                   </tr>
                     </tbody>
                 </table>

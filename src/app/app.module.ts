@@ -75,7 +75,8 @@ import {AdminOptionComponent} from './AdminDashboard/admin.options'
           {path:"logout",component:LogoutComponent},
           {path:"changePass",component:ChangePasswordComponent},
           {path:"adminLogin",component:AdminLoginComponent},
-          {path:"adminOptions",component:AdminOptionComponent}
+          {path:"adminOptions",component:AdminOptionComponent},
+          {path:"vehicleList",component:AdminComponent}
         ]
     },
 

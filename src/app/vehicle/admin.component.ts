@@ -3,7 +3,7 @@ import { AdminService } from '../services/admin.service'
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-admin',
+  selector: 'app-admin-vehicle',
   templateUrl: './admin.component.html',
   providers:  [ AdminService ],
   styleUrls: ['./admin.component.css']
@@ -40,6 +40,7 @@ export class AdminComponent implements OnInit {
       console.log("vehicle",this.vehicles)
 
     }
+
 
 
 

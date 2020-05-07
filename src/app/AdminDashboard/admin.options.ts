@@ -21,6 +21,8 @@ export class AdminOptionComponent implements OnInit {
   ngOnInit(): void 
   {
   }
-
+  getVehicle(){
+    this.router.navigate(['vehicleList'])
+  }
     
   }

@@ -29,7 +29,7 @@ export class AdminLoginComponent implements OnInit {
        emailId:emailId.value,
        password:password.value
      }
-     
+     console.log("login obj:",this.login)
      this.loginService.loginUser(this.login);
      if(this.loginService.sessionId != null){
      console.log("sessionId: ",this.loginService.sessionId)
