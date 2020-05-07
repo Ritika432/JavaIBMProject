@@ -33,20 +33,11 @@ export class LoginComponent implements OnInit {
       emailId:emailId.value,
       password:password.value
     }
-    this.loginService.loginUser(this.login).subscribe(
-      (res:Result)=>{
-        if (res.result==="success")
-          {
-            this.sessionId=res.sessionId;
-            alert("logged in successfully")
-          }
-        else
-        {
-          alert("Invalid Email OR Password")
-        }
-      }
-    );
-    
+    this.loginService.loginUser(this.login);
+    if(this.loginService.sessionId != null)
+     alert("User Logged In");
+    else
+    alert("Invalid Email-Id or Password");
  }
 
   
