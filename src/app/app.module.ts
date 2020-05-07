@@ -25,7 +25,7 @@ import { AdminPost } from './vehicle/admin.post';
 import { AdminPut} from './vehicle/admin.put';
 import { AdminDelete } from './vehicle/admin.delete';
 import { AdminComponent } from './vehicle/admin.component';
-
+import {HomepageComponent} from './homepage/homepage.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +42,9 @@ import { AdminComponent } from './vehicle/admin.component';
     ChangePasswordComponent,
     LogoutComponent,
     DashBoardComponent,AdminPost,
-    AdminPut,AdminDelete,DriverComponent
+    AdminPut,AdminDelete,DriverComponent,
+    
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
