@@ -1,0 +1,13 @@
+#footer-container{
+    background-color:rgb(4, 85, 54);
+    height: 50px;
+    width: 100%;
+    padding: 90px;
+    transform: translateY(638px);
+    position: absolute;
+}
+footer{
+	position: relative;
+    align-items: center;
+
+}
